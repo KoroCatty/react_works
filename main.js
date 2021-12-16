@@ -1,18 +1,18 @@
 
 
 // Open up the dropdown menu
-document.querySelector(".nav__right__search__button").addEventListener("click", openMenu);
+// document.querySelector(".nav__right__search__button").addEventListener("click", openMenu);
 
-function openMenu() {
-  document.querySelector(".nav__right__search__button__menu").classList.toggle("active"); //classList allow you to access to CSS class.
-}
+// function openMenu() {
+//   document.querySelector(".nav__right__search__button__menu").classList.toggle("active"); //classList allow you to access to CSS class.
+// }
 
 // Change the magnify icon's background color
-document.querySelector(".nav__right__search__button").addEventListener("click", changeColor);
+// document.querySelector(".nav__right__search__button").addEventListener("click", changeColor);
 
-function changeColor() {
-  document.querySelector(".nav__right__search__button").classList.toggle("active");
-}
+// function changeColor() {
+//   document.querySelector(".nav__right__search__button").classList.toggle("active");
+// }
 
 
 
@@ -75,13 +75,13 @@ $(document).ready(function () {
 
 
 // 3つ目
-//slick slider for topics_container__slider
+//slick slider for topics_container__slider (ポートフォリオ)
 $(document).ready(function () {
   $('.topics_container__slider').slick({
     autoplay: true,
     autoplaySpeed: 2000,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 1,
     arrows: true,
     prevArrow: '<span class="slick-arrow_prev"><img src="imgs/prev_on.png"></span>',
