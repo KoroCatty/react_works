@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta discription="">
+
+  <title>Kay-portfolios</title>
+  <!-- google font cdn -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- font awesome cdn  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- slick for slider -->
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+  <!-- swiper for fade slider -->
+  <!-- <link rel="stylesheet" href="swiper-bundle.min.css">
+  <link rel="stylesheet" href="swiper-bundle.min.js"> -->
+
+
+
+  <link rel="stylesheet" href="scss/style.css">
+</head>
+
+<body>
+  <div class="top"></div>
+
+
+  <nav class="nav">
+    <ul class="nav__left">
+      <li class="nav__left__primary">
+        <a href="">
+          <img class="nav__left__primary--imgSmall" src="imgs/1.JPG" alt="">
+          <img class="nav__left__primary--imgLarge" src="imgs/2.jpg" alt="">
+        </a>
+      </li>
+
+      <li class="nav__left__secondary">
+        <img class="nav__left__secondary--img" src="imgs/4.jpg" alt="">
+      </li>
+
+    </ul>
+
+    <!-- <div class="nav__empty"></div> -->
+
+    <ul class="nav__right">
+      <li class="nav__right__menu">
+        <a class="nav__right__menu--link" href="#">About</a>
+      </li>
+      <li class="nav__right__menu">
+        <a class="nav__right__menu--link" href="#">Works</a>
+      </li>
+      <li class="nav__right__menu">
+        <a class="nav__right__menu--link" href="#">Contact</a>
+      </li>
+      <li class="nav__right__menu">
+        <a class="nav__right__menu--link" href="#">企業情報
+        </a>
+      </li>
+
+      <li class="nav__right__contact">
+        <a href="#">Contact</a>
+      </li>
+
+      <li class="nav__right__search">
+        <button class="nav__right__search__button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <!-- クリックされたら表示する箇所 -->
+        <form class="nav__right__search__button__menu">
+          <div class="nav__right__search__button__menu--wrapper">
+            <input type="text" class="nav__right__search__button__menu--textarea" placeholder="Put anything here">
+            <button type="submit" class="nav__right__search__button__menu__textarea--button">Search</button>
+          </div>
+        </form>
+      </li>
+    </ul>
+
+
+
+    <div class="hamburger">
+
+      <div class="hamburger__spMmenu">
+        <span class="open hamburger__spMmenu--icons">
+          <i class="fa-solid fa-bars"></i>
+        </span>
+      </div>
+
+      <div class="hamburger__overlay">
+        <span class="close hamburger__overlay--icons">
+          <i class="fa-solid fa-xmark"></i>
+        </span>
+
+
+        <dl class="hamburger__overlay--wrapper">
+          <!-- 1 -->
+          <div class="hamburger__overlay--item">
+            <a class="hamburger__overlay--itemLink" href="#">
+              
+              <dt class="hamburger__overlay--q">個人のお客様</dt>
+            </a>
+            <div class="hamburger__overlay--open">+</div>
+
+            <dd class="hamburger__overlay--a">
+              <ul class="hamburger__overlay--group">
+
+                <li class="hamburger__overlay--unit">
+                  <a class="hamburger__overlay--unitLink" href="#">ああああ</a>
+                </li>
+                <li class="hamburger__overlay--unit">
+                  <a class="hamburger__overlay--unitLink" href="#">ああああ</a>
+                </li>
+                <li class="hamburger__overlay--unit">
+                  <a class="hamburger__overlay--unitLink" href="#">あああ</a>
+                </li>
+              </ul>
+            </dd>
+          </div>
+
+          <!-- 2 -->
+          <div class="hamburger__overlay--item">
+            <a class="hamburger__overlay--itemLink" href="#">
+              <dt class="hamburger__overlay--q">法人のお客様</dt>
+            </a>
+            <div class="hamburger__overlay--open">+</div>
+
+            <dd class="hamburger__overlay--a">
+              <ul class="hamburger__overlay--group">
+
+                <li class="hamburger__overlay--unit">
+                  <a class="hamburger__overlay--unitLink" href="#">相場情報</a>
+                </li>
+                <li class="hamburger__overlay--unit">
+                  <a class="hamburger__overlay--unitLink" href="#">業界ニュース</a>
+                </li>
+                <li class="hamburger__overlay--unit">
+                  <a class="hamburger__overlay--unitLink" href="#">資料室</a>
+                </li>
+              </ul>
+            </dd>
+          </div>
+
+          <!-- 3 -->
+          <div class="hamburger__overlay--item">
+            <a class="hamburger__overlay--itemLink" href="#">
+              <dt class="hamburger__overlay--q">採用情報</dt>
+            </a>
+            <div class="hamburger__overlay--open">+</div>
+
+            <dd class="hamburger__overlay--a">
+              <ul class="hamburger__overlay--group">
+
+                <li class="hamburger__overlay--unit">
+                  <a class="hamburger__overlay--unitLink" href="#">会社を知る</a>
+                </li>
+                <li class="hamburger__overlay--unit">
+                  <a class="hamburger__overlay--unitLink" href="#">社員を知る</a>
+                </li>
+                <li class="hamburger__overlay--unit">
+                  <a class="hamburger__overlay--unitLink" href="#">働く環境・キャリアを知る</a>
+                </li>
+                <li class="hamburger__overlay--unit">
+                  <a class="hamburger__overlay--unitLink" href="#">募集要項</a>
+                </li>
+                <li class="hamburger__overlay--unit">
+                  <a class="hamburger__overlay--unitLink" href="#">FAQ</a>
+                </li>
+
+                <li class="hamburger__overlay--unitButton pic">
+                  <a class="hamburger__overlay--unitButtonLink" href="#">ENTRY</a>
+                </li>
+
+              </ul>
+            </dd>
+          </div>
+
+          <!-- 4 -->
+          <div class="hamburger__overlay--item">
+            <a class="hamburger__overlay--itemLink" href="#">
+              <dt class="hamburger__overlay--q">企業情報</dt>
+            </a>
+            <div class="hamburger__overlay--open">+</div>
+
+            <dd class="hamburger__overlay--a">
+              <ul class="hamburger__overlay--group">
+
+                <li class="hamburger__overlay--unit">
+                  <a class="hamburger__overlay--unitLink" href="#">社長メッセージ</a>
+                </li>
+                <li class="hamburger__overlay--unit">
+                  <a class="hamburger__overlay--unitLink" href="#">経営理念</a>
+                </li>
+                <li class="hamburger__overlay--unit">
+                  <a class="hamburger__overlay--unitLink" href="#">CSR活動</a>
+                </li>
+                <li class="hamburger__overlay--unit">
+                  <a class="hamburger__overlay--unitLink" href="#">事業所案内</a>
+                </li>
+                <li class="hamburger__overlay--unit">
+                  <a class="hamburger__overlay--unitLink" href="#">コンプライアンス</a>
+                </li>
+
+                <li class="hamburger__overlay--unitButton">
+                  <a class="hamburger__overlay--unitButtonLink" href="#">ああああ</a>
+                </li>
+              </ul>
+            </dd>
+          </div>
+
+          <div class="hamburger__overlay--bottomButton">
+            <a class="hamburger__overlay--bottomButtonLink" href="#">お問い合わせ</a>
+          </div>
+
+          <div class="search" <form action="#" role="search">
+            <input type="text" name="q" value="" placeholder="あああ" aria-label="検索キーワード" tabindex="-1">
+            <button type="submit" tabindex="-1">検索</button>
+            </form>
+          </div>
+        </dl>
+
+
+      </div>
+      <!-- .hamburger -->
+
+  </nav>
+
+
+
+
+
+
+  <div class="main_vis">
+    <div class=" main_visual">
+
+      <div class="main_visual__wrapper">
+
+        <div class="main_visual__wrapper__block">
+          <img src="imgs/2.jpg" alt="">
+        </div>
+        <div class="main_visual__wrapper__block">
+          <img src="imgs/2.jpg" alt="">
+        </div>
+        <div class="main_visual__wrapper__block">
+          <img src="imgs/3.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="main_visual__textArea">
+        <div class="main_visual__textArea__text--primary">NO more no cry。</div>
+        <div class="空文字を入れて文字が重なるのを防ぐ"></div>
+        <div class="main_visual__textArea__text--secondary">NO music no Life。</div>
+      </div>
+
+      <a href="#">
+        <div class="main_visual__button">
+         私ができること
+        </div>
+      </a>
+
+    </div>
+    <!-- .main_visual -->
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <div class="container">
+
+
+    <article class="article">
+
+      <div class="article__wrapper">
+        <div class="article__wrapper__text">
+
+          <h2 class="article__wrapper__text__h2">
+            <span class="article__wrapper__text__h2--title">Portfolios<br>
+              いいねー<br>
+            </span>
+            <span class="article__wrapper__text__h2--smallTitle">From Farm tto Table</span>
+          </h2>
+
+          <p class="article__wrapper__text__textArea">
+            I told you no music no life<br>
+            I told you no music no life<<br>
+       I told you no music no life<<br>
+            I told you no music no life<<br>
+            I told you no music no life<<br>
+         I told you no music no life<、<br>
+            I told you no music no life<</p>
+        </div>
+        <!-- .text_varticle -->
+
+        <div class="article__wrapper__img">
+
+          <a class="article__wrapper__img--link" href="#">
+            <div class="article__wrapper__img--site">
+              <img class="article__wrapper__img--img" class="" src="imgs/customer.jpg" alt="">
+            </div>
+            <div class="article__wrapper__img__text">
+              <span class="article__wrapper__img__text--top">個人のお客さま</span>
+              <span class="article__wrapper__img__text--bottom">メニュー、栄養、雑学がわかる</span>
+            </div>
+          </a>
+
+          <script>
+
+
+          </script>
+
+
+
+          <a class="article__wrapper__img--link" href="#">
+            <div class="article__wrapper__img--site">
+              <img class="article__wrapper__img--img" src="imgs/business.jpg" alt="">
+            </div>
+            <div class="article__wrapper__img__text">
+              <span class="article__wrapper__img__text--top">個人のお客さま</span>
+              <span class="article__wrapper__img__text--bottom">相場と、業界の今がわかる</span>
+            </div>
+          </a>
+
+
+          <div class="article__wrapper__button">
+            <a class="article__wrapper__button--text" href="#">企業情報</a>
+            <a class="article__wrapper__button--text href=" #">採用情報</a>
+          </div>
+        </div>
+        <!-- .article__wrapper -->
+
+      </div>
+      <!-- .flex_horizontal -->
+    </article>
+
+  </div>
+  <!-- .container -->
+
+
+
+
+
+  <section class="topics">
+
+    <div class="topics_container">
+      <h2 class="topics_container__texts">
+        <span class="topics_container__texts--title">Portfolios </span>
+        <span class="topics_container__texts--smallTitle">ポートフォリオ</span>
+      </h2>
+
+      <div class="topics_container__slider">
+
+        <div class="topics_container__slider__block">
+          <a href="#" class="topics_container__slider__block--link">
+            <div class="topics_container__slider__block--img">
+              <img src="imgs/フラメンカ横-scaled.jpg" alt="">
+            </div>
+
+            <div class="topics_container__slider__block__tag">業界ニュース</div>
+
+            <div class="topics_container__slider__txt">
+              <time>2021.10.06</time>
+              <h3>I was told i used to be bonkers…</h3>
+              <p>i was gobsmacked that Koro swallowed Millie</p>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="topics_container__slider__block">
+          <a href="#" class="topics_container__slider__block--link">
+            <div class="topics_container__slider__block--img">
+              <img src="imgs/GI-jztamago-73451970_740.jpg" alt="">
+            </div>
+
+            <div class="topics_container__slider__block__tag">業界ニュース</div>
+
+            <div class="topics_container__slider__txt">
+              <time>2021.10.06</time>
+              <h3>I was told i used to be bonkers…</h3>
+              <p>i was gobsmacked that Koro swallowed Millie</p>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="topics_container__slider__block">
+          <a href="#" class="topics_container__slider__block--link">
+            <div class="topics_container__slider__block--img">
+              <img src="imgs/焼きそば皿盛り横01-scaled.jpg" alt="">
+            </div>
+
+            <div class="topics_container__slider__block__tag">業界ニュース</div>
+
+            <div class="topics_container__slider__txt">
+              <time>2021.10.06</time>
+              <h3>I was told i used to be bonkers…</h3>
+              <p>i was gobsmacked that Koro swallowed Millie</p>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="topics_container__slider__block">
+          <a href="#" class="topics_container__slider__block--link">
+            <div class="topics_container__slider__block--img">
+              <img src="imgs/GI-jztamago-80284534_740.jpg" alt="">
+            </div>
+
+            <div class="topics_container__slider__block__tag">業界ニュース</div>
+
+            <div class="topics_container__slider__txt">
+              <time>2021.10.06</time>
+              <h3>I was told i used to be bonkers…</h3>
+              <p>i was gobsmacked that Koro swallowed Millie</p>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="topics_container__slider__block">
+          <a href="#" class="topics_container__slider__block--link">
+            <div class="topics_container__slider__block--img">
+              <img src="imgs/GI-jztamago-117154934_740.jpg" alt="">
+            </div>
+
+            <div class="topics_container__slider__block__tag">業界ニュース</div>
+
+            <div class="topics_container__slider__txt">
+              <time>2021.10.06</time>
+              <h3>I was told i used to be bonkers…</h3>
+              <p>i was gobsmacked that Koro swallowed Millie</p>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="topics_container__slider__block">
+          <a href="#" class="topics_container__slider__block--link">
+            <div class="topics_container__slider__block--img">
+              <img src="imgs/GI-jztamago-1023819812_740.jpg" alt="">
+            </div>
+
+            <div class="topics_container__slider__block__tag">業界ニュース</div>
+
+            <div class="topics_container__slider__txt">
+              <time>2021.10.06</time>
+              <h3>I was told i used to be bonkers…</h3>
+              <p>i was gobsmacked that Koro swallowed Millie</p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+      <!-- .topics_container__slider -->
+
+    </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+  <div class="container2">
+
+
+    <section class="news">
+      <div class="news_container">
+        <h2 class="news_container__h2">
+          <span class="news_container__h2--title">ニュース</span>
+          <span class="news_container__h2--smallTitle">News</span>
+
+          <button class="news_container__h2--button">
+            <a href="#">一覧を見る</a>
+            <img src="icons/icon_arrow_on.svg" alt="">
+          </button>
+        </h2>
+
+
+
+
+        <ul class="news__info">
+
+          <li class="news__info__group">
+            <a class="news__info__group--link" href="#">
+              <time class="news__info__group--time">2021.06.03</time>
+
+              <div class="news__info__group__notification">
+                <span>お知らせ</span>
+              </div>
+              <div class="news__info__group__text">あああ</div>
+            </a>
+          </li>
+          <li class="news__info__group">
+            <a class="news__info__group--link" href="#">
+              <time class="news__info__group--time">2021.06.03</time>
+
+              <div class="news__info__group__notification">
+                <span>お知らせ</span>
+              </div>
+              <div class="news__info__group__text">ああああ」</div>
+            </a>
+          </li>
+          <li class="news__info__group">
+            <a class="news__info__group--link" href="#">
+              <time class="news__info__group--time">2021.06.03</time>
+
+              <div class="news__info__group__notification">
+                <span>お知らせ</span>
+              </div>
+              <!-- <div class="news__info__group__text">ああああああ</div> -->
+            </a>
+          </li>
+          <li class="news__info__group">
+            <a class="news__info__group--link" href="#">
+              <time class="news__info__group--time">2021.06.03</time>
+
+              <div class="news__info__group__notification">
+                <span>お知らせ</span>
+              </div>
+              <div class="news__info__group__text">うううううう</div>
+            </a>
+          </li>
+
+
+        </ul>
+      </div>
+    </section>
+
+  </div>
+  <!-- .container2 -->
+
+
+
+
+
+
+
+  <footer>
+
+    <div class="fixed-button">
+      <a id="adding" style="display: block;">
+        <i class="fa-solid fa-circle-arrow-up"></i>
+      </a>
+    </div>
+
+    <script>
+      // Top button 
+      window.addEventListener("scroll", function () {
+        let scroll = document.documentElement.scrollTop;
+        // document.getElementsById("scrollValue").textContent = scroll;
+        console.log(scroll);
+
+        //スクロール値が２００を超えたらid=addingのあるタグにlink-pagetopを付け足し、ｃｓｓに予め記載されたものが起動
+        if (scroll > 200) {
+          document.getElementById("adding").classList.add("link-pagetop");
+        }
+        //200以下で上で付加したものを取り除く
+        if (scroll < 200) {
+          document.getElementById("adding").classList.remove("link-pagetop");
+        }
+      }
+      );
+
+      const pagetopBtn = document.querySelector('#adding');
+      pagetopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+
+    </script>
+
+
+
+
+
+
+
+
+    <div class="footer__container">
+
+      <div class="footer__slider">
+        <ul class="footer__slider__wrapper">
+
+          <li class="footer__slider__wrapper__individual">
+            <a class="footer__slider__wrapper__individual--link" href="#">
+              <img src="imgs/banner_cocco.jpg" alt="">
+            </a>
+          </li>
+
+          <li class="footer__slider__wrapper__individual">
+            <a class="footer__slider__wrapper__individual--link" href="#">
+              <img src="imgs/banner_folicacid.jpg" alt="">
+            </a>
+          </li>
+
+          <li class="footer__slider__wrapper__individual">
+            <a class="footer__slider__wrapper__individual--link" href="#">
+              <img src="imgs/banner_ambassador.jpg" alt="">
+            </a>
+          </li>
+
+          <li class="footer__slider__wrapper__individual">
+            <a class="footer__slider__wrapper__individual--link" href="#">
+              <img src="imgs/banner_cookpad.jpg" alt="">
+            </a>
+          </li>
+
+          <li class="footer__slider__wrapper__individual">
+            <a class="footer__slider__wrapper__individual--link" href="#">
+              <img src="imgs/banner_snapdish.jpg" alt="">
+            </a>
+          </li>
+
+        </ul>
+      </div>
+      <!-- .footer__slider -->
+
+
+
+      <div class="footer__group">
+        <!--hide in tablet size -->
+
+        <!-- 1 -->
+        <dl class="footer__group__block">
+          <!-- difinition list -->
+          <dt class="footer__group__title">
+            <!-- difinition term -->
+            <a href="#">個人のお客さま</a>
+          </dt>
+
+          <dd class="footer__group--dd">
+            <!-- Definition Description） -->
+            <ul class="footer__group__list">
+
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">Koro Bastard</a>
+              </li>
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">Koro Bastard</a>
+              </li>
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">生産者コード検索</a>
+              </li>
+
+              <li class="footer__group__list__text--news">
+                <a class="footer__group__list__text--link" href="#">ニュース</a>
+              </li>
+
+            </ul>
+          </dd>
+        </dl>
+
+        <!-- 2 -->
+        <dl class="footer__group__block">
+          <!-- difinition list -->
+          <dt class="footer__group__title">
+            <!-- difinition term -->
+            <a href="#">法人のお客さま</a>
+          </dt>
+
+          <dd class="footer__group--dd">
+            <!-- Definition Description） -->
+            <ul class="footer__group__list">
+
+
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">相場情報</a>
+              </li>
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">業界ニュース</a>
+              </li>
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">Koro Bastard</a>
+              </li>
+              <li class="footer__group__list__text--news">
+                <a class="footer__group__list__text--link" href="#">お問い合わせ</a>
+              </li>
+
+            </ul>
+          </dd>
+        </dl>
+
+        <!-- 3 -->
+        <dl class="footer__group__block">
+          <!-- difinition list -->
+          <dt class="footer__group__title">
+            <!-- difinition term -->
+            <a href="#">採用情報</a>
+          </dt>
+
+          <dd class="footer__group--dd">
+            <!-- Definition Description） -->
+            <ul class="footer__group__list">
+
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">会社を知る</a>
+              </li>
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">社員を知る</a>
+              </li>
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">Koro Bastard</a>
+              </li>
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">Koro Bastard</a>
+              </li>
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">FAQ</a>
+              </li>
+
+            </ul>
+          </dd>
+        </dl>
+
+        <!-- 4 -->
+        <dl class="footer__group__block">
+          <!-- difinition list -->
+          <dt class="footer__group__title">
+            <!-- difinition term -->
+            <a href="#">企業情報　　　</a>
+          </dt>
+
+          <dd class="footer__group--dd">
+            <!-- Definition Description） -->
+            <ul class="footer__group__list">
+
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">会社概要</a>
+              </li>
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">沿革</a>
+              </li>
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">関連会社リンク</a>
+              </li>
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">社長メッセージ</a>
+              </li>
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">経営理念</a>
+              </li>
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">Koro Bastard</a>
+              </li>
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">Koro Bastard</a>
+              </li>
+
+            </ul>
+          </dd>
+        </dl>
+
+
+        <!-- 5 -->
+        <dl class="footer__group__block">
+          <!-- difinition list -->
+          <dt class="footer__group__title">
+            <!-- difinition term -->
+            <a href="#">あああｄｓｈぢｓ</a>
+          </dt>
+
+          <dd class="footer__group--dd">
+            <!-- Definition Description） -->
+            <ul class="footer__group__list">
+
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">ああああああ</a>
+              </li>
+              <li class="footer__group__list__text">
+                <a class="footer__group__list__text--link" href="#">コンプライアンス</a>
+              </li>
+
+
+            </ul>
+          </dd>
+        </dl>
+
+
+
+
+
+      </div>
+      <!-- .footer_nav -->
+
+    </div>
+    <!-- .footer_container -->
+
+
+
+    <div class="last__row">
+      <div class="last__row__container">
+
+
+        <div class="last__row__img">
+          <a class="last__row__img--link" href="#">
+            <img src="imgs/logo_white.svg" alt="">
+          </a>
+        </div>
+
+        <div class="last__row__empty"></div>
+
+        <ul class="last__row__texts">
+          <li class="last__row__texts--individual">
+            <a class="last__row__texts--link" href="#">プライバシーポリシー</a>
+          </li>
+          <li class="last__row__texts--individual">
+            <a class="last__row__texts--link" href="#">サイトマップ</a>
+          </li>
+          <li class="last__row__texts--individual">
+            <a class="last__row__texts--link" href="#">ご利用にあたって</a>
+          </li>
+
+        </ul>
+
+        <ul class="last__row__sns">
+          <li class="last__row__sns--individual">
+            <a class="last__row__sns--link" href="#">
+              <img src="icons/facebook.png" alt="">
+            </a>
+          </li>
+
+          <li class="last__row__sns--individual">
+            <a class="last__row__sns--link" href="#">
+              <img src="icons/twitter.png" alt="">
+            </a>
+          </li>
+
+          <li class="last__row__sns--individual">
+            <a class="last__row__sns--link" href="#">
+              <img src="icons/youtube.png" alt="">
+            </a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- .last__row__container -->
+
+      <!-- hidden when a laptop size -->
+      <div class="last__row--img">
+        <a class="last__row--link" href="#">
+          <img class="last__row--IMG" src="imgs/logo_white.svg" alt="">
+        </a>
+      </div>
+
+
+    </div>
+    <!-- .last__row -->
+
+
+
+    <div class="copyright">
+      <div class="copyright__container">
+        <p class="copyright__container--text1">COPYRIGHT © KayDrum ALL RIGHTS RESERVED.</p>
+        <p class="copyright__container--text2">
+          いいいいいいいい</p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- jQuery本体を読み込むCDN -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+
+  <!-- slick -->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+
+
+  <!-- CDN swiper -->
+  <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
+
+
+  <!-- Connecting to main.js -->
+  <script type="text/javascript" src="main.js"></script>
+
+
+</body>
+
+</html>

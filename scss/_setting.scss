@@ -1,0 +1,14 @@
+// font face,　mixin,色や変数化したいものなどここに要れる 
+
+// cssファイルで呼び出し
+@font-face {
+  font-family: Noto_sans_JP;
+  src: url('Noto_sans_JP/NotoSansJP-Light.otf') 
+  // format("truetype");
+}
+
+body{
+  font-family: 'Noto_sans_JP';
+  // font-family: YakuHanMPs_Noto, "Noto Serif JP", 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, Meiryo,
+  //   serif;
+}

@@ -1,0 +1,28 @@
+//Breakpoints 
+// 各375px,768px,1280px以下で発動
+@mixin breakpoint($point) {
+  @if $point == mobile {
+    @media screen and (max-width: 376px) {
+      @content;}
+    }
+   @else if $point == tablet {
+    @media screen and (min-width: 377px) and (max-width:768px) {
+      @content;}
+    }
+    @if $point == laptop {
+      @media screen and (min-width: 769px) {
+        @content;}
+      }
+  }
+
+
+  @include breakpoint(mobile) {
+
+  }
+  @include breakpoint(tablet) {
+
+  }
+  
+  @include breakpoint(laptop) {
+  }
+
