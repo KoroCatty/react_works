@@ -64,6 +64,12 @@ body {
     width:32px;
     padding-right:10px;
   }
+  &__iconPerson {
+    width:48px;
+    height: 48px;
+    border-radius: 80%;
+    margin-top:-10px;
+  }
 }
 
 .nav {
@@ -541,7 +547,6 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
   }
 }
 // Tablet Size ----------------------------------------------
-
 @include breakpoint(tablet) {
   .hamburger {
     display: block;
@@ -965,6 +970,27 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
     padding-top: 100px;
   }
 }
+
+// スクロールアニメーション
+.fadeIn.appear{
+  animation-name: fadein;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  transition: ease-in-out;
+}
+@keyframes fadein {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+  }
+
+
+
+
+
 .article__wrapper {
   display: flex;
   justify-content: space-between;
@@ -976,6 +1002,10 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
     display: block;
     margin: 0 37px;
   }
+}
+.article__wrapper__text {
+  width:540px;
+  margin-left:20px;
 }
 .article__wrapper__text__h2 {
   margin-top: 0;
@@ -1036,22 +1066,49 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
   }
 }
 
+
+.article__wrapper__img{
+  position: relative;
+  margin-top:120px;
+  margin-right:20px;
+}
+
+.article__wrapper__img--link.no-hover {
+  cursor:auto;
+}
+
 .article__wrapper__img--site {
   overflow: hidden; //hover時に子要素がはみ出るのを防ぐ
-  // height: 230px;
+  // height: 280px;
   margin-bottom: 30px;
   border-radius: 15px;
+  position:		relative; 
 }
-// .article__wrapper__img{
-//   margin-left:30px;
-//   display:block;
-//   border-radius: 10%;
-// }
+
+// Message and Mask
+.caption {
+	font-size:		130%;
+	color:			#fff;
+	padding-top:		80px;
+	padding-left:		0px;
+}
+ .mask {
+	width: 100%;
+	height:	100%;
+	position:absolute;
+	top:	0;
+	left:	0;
+	opacity	:0;	/* マスクを表示しない */
+	background-color:	rgba(0,0,0,0.4);
+	transition:	all 0.6s ease;
+}
+.article__wrapper__img--site:hover .mask {
+	opacity:	1;	/* マスクを表示する */
+	padding-left:	90px;	/* 右にずらす */
+}
 
 .article__wrapper__img--img {
-  // transition: transform 0.8s;
   display: block;
-  // height: 13vw;
   border-radius: 15px;
   @include breakpoint(mobile) {
     width: 90vw;
@@ -1061,16 +1118,17 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
     display: block;
   }
   @include breakpoint(laptop) {
-    width: 35vw;
+    width: 420px;
+    height: 240px;
   }
 }
 
-// jQuery effect
+// jQuery effect ホバー時
 .article__wrapper__img--img.extra {
   transform: scale(1.1);
   border-radius: 15px;
   display: block;
-  transition: 0.3s all;
+  transition: 0.3s all ease-in-out;
   //Stop zooming in each size
   @include breakpoint(mobile) {
     transform: scale(1);
@@ -1084,46 +1142,46 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
   position: relative;
 }
 
-.article__wrapper__img__text {
-  width: 300px;
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  pointer-events: none; //when mouse hovered keep the transform effect
-}
-.article__wrapper__img__text--top {
-  display: block;
-  margin-top: 16px;
-  font-size: 30px;
-  font-weight: 800;
-  color: white;
-  @include breakpoint(mobile) {
-    font-size: 5vw;
-  }
-  @include breakpoint(tablet) {
-    font-size: 5vw;
-  }
-}
-.article__wrapper__img__text--bottom {
-  display: block;
-  margin-top: 16px;
-  font-size: 16px;
-  font-weight: 800;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  // vertical-align: baseline;
-  background: transparent;
-  color: white;
-  @include breakpoint(mobile) {
-    font-size: 2vw;
-  }
-  @include breakpoint(tablet) {
-    font-size: 2vw;
-    margin-top: 1vw;
-  }
-}
+// .article__wrapper__img__text {
+//   width: 300px;
+//   position: absolute;
+//   top: 40px;
+//   left: 40px;
+//   pointer-events: none; //when mouse hovered keep the transform effect
+// }
+// .article__wrapper__img__text--top {
+//   display: block;
+//   margin-top: 16px;
+//   font-size: 30px;
+//   font-weight: 800;
+//   color: white;
+//   @include breakpoint(mobile) {
+//     font-size: 5vw;
+//   }
+//   @include breakpoint(tablet) {
+//     font-size: 5vw;
+//   }
+// }
+// .article__wrapper__img__text--bottom {
+//   display: block;
+//   margin-top: 16px;
+//   font-size: 16px;
+//   font-weight: 800;
+//   margin: 0;
+//   padding: 0;
+//   border: 0;
+//   outline: 0;
+//   // vertical-align: baseline;
+//   background: transparent;
+//   color: white;
+//   @include breakpoint(mobile) {
+//     font-size: 2vw;
+//   }
+//   @include breakpoint(tablet) {
+//     font-size: 2vw;
+//     margin-top: 1vw;
+//   }
+// }
 
 // .article__wrapper__button {
 //   display: flex;
@@ -1135,37 +1193,37 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
 //   @include breakpoint(tablet) {
 //   }
 // }
-.article__wrapper__button--text {
-  display: block;
-  text-decoration: none;
-  color: rgb(101, 72, 58);
-  font-size: 18px;
-  line-height: 1;
-  font-weight: bold;
-  background-color: white;
-  padding: 12px 55px 10px 55px;
-  border-radius: 100px;
-  // width:65px;
-  letter-spacing: 2px;
-  border: 2px solid rgb(127, 103, 91);
-  @include breakpoint(mobile) {
-    font-size: 4.5vw;
-    line-height: 1;
-    padding: 2vw 4vw 2vw 4vw;
-    font-weight: bold;
-  }
-  @include breakpoint(tablet) {
-  }
-}
-.article__wrapper__button a:last-child {
-  margin-left: 50px;
-}
+// .article__wrapper__button--text {
+//   display: block;
+//   text-decoration: none;
+//   color: rgb(101, 72, 58);
+//   font-size: 18px;
+//   line-height: 1;
+//   font-weight: bold;
+//   background-color: white;
+//   padding: 12px 55px 10px 55px;
+//   border-radius: 100px;
+//   // width:65px;
+//   letter-spacing: 2px;
+//   border: 2px solid rgb(127, 103, 91);
+//   @include breakpoint(mobile) {
+//     font-size: 4.5vw;
+//     line-height: 1;
+//     padding: 2vw 4vw 2vw 4vw;
+//     font-weight: bold;
+//   }
+//   @include breakpoint(tablet) {
+//   }
+// }
+// .article__wrapper__button a:last-child {
+//   margin-left: 50px;
+// }
 
-.article__wrapper__button--text:hover {
-  background-color: #65483a;
-  color: white;
-  transition: background-color 0.2s, color 0.2s;
-}
+// .article__wrapper__button--text:hover {
+//   background-color: #65483a;
+//   color: white;
+//   transition: background-color 0.2s, color 0.2s;
+// }
 
 //Topics------------------------------------------
 .topics {
@@ -1222,10 +1280,10 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
   display: flex;
   // justify-content: space-around;
 }
-
+// 各ブロック
 .topics_container__slider__block {
   width: 320px;
-  height: 370px;
+  // height: 370px;
   margin-right: 20px;
   margin-left: 20px;
   margin-top: 20px;
@@ -1251,24 +1309,23 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
   overflow: hidden;
   display: block;
   margin:0;
-  width:260px;
+  // background-color: green;
+  position:relative;
 }
+// .topics_container__slider__block--img {
+//   width:100%;
+//   overflow: hidden;
+//   margin: 20px 10px 20px 30px;
+//   vertical-align:top;
+// }
 .topics_container__slider__block--img {
-  width:100%;
-  overflow: hidden;
-  margin: 20px 10px 20px 30px;
-  vertical-align:top;
-}
-.topics_container__slider__block--img {
-  img {
-    width: 100%;
-    // height: 145px;
+    width: 95%;
+    height: 350px;
     display: block;
     border-radius: 5px;
-    margin:0 ;
-    padding:0;
+    margin: 0 auto 0 auto;
+    padding:10px 0;
     // vertical-align:top;
-  }
 }
 // sliderの各画像のzoom effect
 .topics_container__slider__block:hover img {
@@ -1302,14 +1359,15 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
 
 .topics_container__slider__block__tag {
   position: absolute;
-  left: -10px;
-  top: 30px;
+  left: 27%;
+  top: 80%;
   min-width: 90px;
-  padding: 5px 10px;
+  padding: 3px 10px;
   // border-radius: 2px;
-  background-color: #a8b233;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 50px;
   color: #fff;
-  font-size: 10px;
+  font-size: 2.5vw;
   text-align: center;
 }
 
@@ -1370,6 +1428,10 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
 //hover effect
 
 //News-------------------------------------------
+// .container2 {
+//   background-image: url("/imgs/4.jpg");
+//   opacity: 0.7;
+// }
 .news {
   // background-color:rgb(176, 238, 176) ;
   max-width: 1040px;
@@ -1419,138 +1481,74 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
   }
 }
 
-.news_container__h2--button {
-  position: absolute;
-  top: 40px;
-  left: 930px;
-  border: none;
-  background-color: white;
-  display: inline-block;
-  padding-right: 23px;
-  font-size: 14px;
-  font-weight: bold;
-  transition: color 0.2s;
-  @include breakpoint(mobile) {
-    position: absolute;
-    top: 530px;
-    left: 50px;
-    font-size: 3.5vw;
-    font-weight: 900;
-    width: 250px;
-    font-family: YakuHanJPs_Noto, "Noto Sans JP", "Yu Gothic", "Hiragino kaku Gothic ProN", Meiryo, sans-serif;
-  }
-  @include breakpoint(tablet) {
-    position: absolute;
-    top: 600px;
-    left: 330px;
-  }
-  a {
-    color: #65483a;
-    text-decoration: none;
-  }
-  img {
-    width: 20px;
-    position: absolute;
-    top: 2px;
-    left: 80px;
-    @include breakpoint(mobile) {
-      position: absolute;
-      top: 2px;
-      left: 155px;
-    }
-  }
-}
+// .news_container__h2--button {
+//   position: absolute;
+//   top: 40px;
+//   left: 930px;
+//   border: none;
+//   background-color: white;
+//   display: inline-block;
+//   padding-right: 23px;
+//   font-size: 14px;
+//   font-weight: bold;
+//   transition: color 0.2s;
+//   @include breakpoint(mobile) {
+//     position: absolute;
+//     top: 530px;
+//     left: 50px;
+//     font-size: 3.5vw;
+//     font-weight: 900;
+//     width: 250px;
+//     font-family: YakuHanJPs_Noto, "Noto Sans JP", "Yu Gothic", "Hiragino kaku Gothic ProN", Meiryo, sans-serif;
+//   }
+//   @include breakpoint(tablet) {
+//     position: absolute;
+//     top: 600px;
+//     left: 330px;
+//   }
+//   a {
+//     color: #65483a;
+//     text-decoration: none;
+//   }
+//   img {
+//     width: 20px;
+//     position: absolute;
+//     top: 2px;
+//     left: 80px;
+//     @include breakpoint(mobile) {
+//       position: absolute;
+//       top: 2px;
+//       left: 155px;
+//     }
+//   }
+// }
 
 .news_container__h2--button:hover {
   opacity: 0.6;
 }
 
-.news__info {
-  // height: 513px;
-  padding-left: 0;
+.skillsSquare {
+  // display: flex;
+  height: 500px;
+width:1040px;
+margin:auto;
+// background-color: rgba(255, 255, 255, 0.8);
+background-color: rgba(0, 0, 0, 0.6);
 }
-.news__info__group {
-  border-top: 1px solid rgba(119, 119, 119, 0.2);
-  list-style: none;
-  width: 90%;
-  // height: 20%;
-  transition: all 0.4s ease;
-  @include breakpoint(mobile) {
-    // text-align: center;
+
+.skillsGroup {
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  &__item {
+    background-color: green;
+    color:white;
   }
-  @include breakpoint(tablet) {
+  &__img {
+    width:100px;
   }
 }
 
-.news__info__group--link {
-  text-decoration: none;
-  display: flex;
-  padding: 25px 15px 25px 20px;
-  @include breakpoint(mobile) {
-    display: block;
-    padding: 4vw 1vw 4vw 5vw;
-  }
-  @include breakpoint(tablet) {
-  }
-}
-
-.news__info__group:hover {
-  opacity: 0.7;
-}
-.news__info__group:last-child {
-  border-bottom: 1px solid rgba(119, 119, 119, 0.2);
-}
-
-.news__info__group--time {
-  padding-right: 30px;
-  color: #f4981c;
-  font-family: Heebo, sans-serif;
-  white-space: nowrap;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-.news__info__group__notification {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: 30px;
-  height: 2vw;
-  span {
-    display: inline-block;
-    padding: 1px 15px;
-    border: 1px solid #65483a;
-    border-radius: 2px;
-    color: #65483a;
-    font-size: 14px;
-    white-space: nowrap;
-    align-items: center;
-    @include breakpoint(mobile) {
-      font-size: 3vw;
-      padding: 0px 5px;
-      position: relative;
-      top: -25px;
-      left: 100px;
-    }
-    @include breakpoint(tablet) {
-    }
-  }
-}
-.news__info__group__text {
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  vertical-align: baseline;
-  background: transparent;
-  color: rgb(53, 53, 53);
-  font-weight: 500;
-  @include breakpoint(mobile) {
-    font-size: 3.5vw;
-    font-weight: 700;
-  }
-  @include breakpoint(tablet) {
-  }
-}
 
 //footer------------------------------------------------------------
 

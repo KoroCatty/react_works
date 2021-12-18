@@ -81,7 +81,7 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 2000,
     infinite: true,
-    slidesToShow: 5,
+    slidesToShow: 2.3,
     slidesToScroll: 1,
     arrows: true,
     prevArrow: '<span class="slick-arrow_prev"><img src="imgs/prev_on.png"></span>',
@@ -209,5 +209,45 @@ dts.forEach(EL => {
 })
 
 
+
+
+
+// スクロールアニメーション　for each section
+const targets = document.querySelectorAll('.fadeIn');
+
+function koro(cactus, finishObservation) {
+  console.log(cactus);
+
+  cactus.forEach(cat => {
+
+    if (!cat.isIntersecting) {
+      return;
+    }
+
+    cat.target.classList.add('appear');
+
+    finishObservation.unobserve(cat.target);
+
+  });
+}
+
+const milli = {
+  // threshold: [0.2, 0.8],
+  threshold: 0.1,
+  // rootMargin: '0px 0px -100px',　rootの幅を自由に変えれる。（この場合はbottomが-100px）
+}
+
+const observer = new IntersectionObserver(koro, milli);
+
+
+targets.forEach(target => {
+  observer.observe(target);
+});
+
+// css
+// .IOAPI__img.appear {
+//   left: 0;
+//   opacity: 1;
+// }
 
 
