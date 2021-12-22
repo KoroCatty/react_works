@@ -69,6 +69,13 @@ body {
     height: 48px;
     border-radius: 80%;
     margin-top:-10px;
+    @include breakpoint(mobile) {
+      width:100px;
+    }
+    @include breakpoint(tablet) {
+    }
+    @include breakpoint(laptop) {
+    }
   }
 }
 
@@ -219,20 +226,6 @@ body {
   // margin-right: 30px;
   position: relative; //For a hidden input form
 }
-// .nav__right__search__button {
-//   background-color: rgb(144, 128, 113);
-//   width: 36px;
-//   height: 36px;
-//   margin-top: 20px;
-//   border-radius: 50%;
-// }
-// .nav__right__search__button:hover {
-//   background-color: #d8b3a2;
-// }
-
-// .nav__right__search__button.active {
-//   background-color: rgb(245, 181, 121);
-// }
 
 //いつもは非表示にする
 .nav__right__search__button__menu {
@@ -242,48 +235,6 @@ body {
   display: none;
   // display:flex;
 }
-
-// .nav__right__search__button__menu--wrapper {
-//   display: flex;
-//   padding: 20px;
-//   background-color: rgb(229, 229, 229);
-//   border-radius: 3%;
-// }
-
-//クリックされたらactive追加で表示する
-// .nav__right__search__button__menu.active {
-//   /* There's no space between them, which means I select both of them. */
-//   display: block;
-//   position: absolute;
-//   top: 70px;
-//   left: -370px;
-//   z-index: 1500;
-// }
-// inputの中身
-// .nav__right__search__button__menu--textarea {
-//   width: 290px;
-//   height: 40px;
-//   padding: 0 10px;
-//   border-radius: 4px 0 0 4px;
-//   background-color: #fff;
-//   font-size: 14px;
-//   line-height: 40px;
-//   font-family: inherit;
-//   color: rgb(223, 223, 223, 0.9);
-//   font-weight: 700;
-//   border: none;
-// }
-// inputとなりの検索ボタン
-// .nav__right__search__button__menu__textarea--button {
-//   width: 70px;
-//   height: 40px;
-//   border: none;
-//   background-color: rgb(101, 72, 58);
-//   color: white;
-//   font-family: inherit;
-//   font-size: 18px;
-//   font-weight: 800;
-// }
 
 //Hamburger Menu
 .hamburger {
@@ -797,7 +748,7 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
   width:100%;
   background: transparent;
   position: relative; 
-  height: 460px;
+  height: 420px;
   @include breakpoint(mobile) {
     height: 130vw;
   }
@@ -1140,6 +1091,7 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
 .article__wrapper__img--link {
   text-decoration: none;
   position: relative;
+  display:block;
 }
 
 // .article__wrapper__img__text {
@@ -1227,6 +1179,7 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
 
 //Topics------------------------------------------
 .topics {
+  // background-color: rgb(244, 241, 237);
   background-color: rgb(244, 241, 237);
   // height: 700px;
   padding-top: 50px;
@@ -1287,6 +1240,7 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
   margin-right: 20px;
   margin-left: 20px;
   margin-top: 20px;
+  // background-color: rgb(244, 241, 237);
   background-color: white;
   position: relative; //For  topics_container__slider__block__tag
   overflow: hidden;
@@ -1428,12 +1382,14 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
 //hover effect
 
 //News-------------------------------------------
-// .container2 {
-//   background-image: url("/imgs/4.jpg");
-//   opacity: 0.7;
-// }
+.container2 {
+  background-image: url("/imgs/melbourne.jpg");
+//   background-color: rgb(244, 241, 237);
+// background: no-repeat;
+background-size: cover;
+}
 .news {
-  // background-color:rgb(176, 238, 176) ;
+  // background-color:rgb(255, 255, 255) ;
   max-width: 1040px;
   margin: auto;
   height: 530px;
@@ -1481,71 +1437,32 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
   }
 }
 
-// .news_container__h2--button {
-//   position: absolute;
-//   top: 40px;
-//   left: 930px;
-//   border: none;
-//   background-color: white;
-//   display: inline-block;
-//   padding-right: 23px;
-//   font-size: 14px;
-//   font-weight: bold;
-//   transition: color 0.2s;
-//   @include breakpoint(mobile) {
-//     position: absolute;
-//     top: 530px;
-//     left: 50px;
-//     font-size: 3.5vw;
-//     font-weight: 900;
-//     width: 250px;
-//     font-family: YakuHanJPs_Noto, "Noto Sans JP", "Yu Gothic", "Hiragino kaku Gothic ProN", Meiryo, sans-serif;
-//   }
-//   @include breakpoint(tablet) {
-//     position: absolute;
-//     top: 600px;
-//     left: 330px;
-//   }
-//   a {
-//     color: #65483a;
-//     text-decoration: none;
-//   }
-//   img {
-//     width: 20px;
-//     position: absolute;
-//     top: 2px;
-//     left: 80px;
-//     @include breakpoint(mobile) {
-//       position: absolute;
-//       top: 2px;
-//       left: 155px;
-//     }
-//   }
-// }
-
 .news_container__h2--button:hover {
   opacity: 0.6;
 }
 
 .skillsSquare {
   // display: flex;
-  height: 500px;
-width:1040px;
+  // height: 500px;
+max-width:760px;
 margin:auto;
-// background-color: rgba(255, 255, 255, 0.8);
-background-color: rgba(0, 0, 0, 0.6);
+background-color:rgba(255,255,255,0.5) ;
+border-radius: 30px;
 }
 
 .skillsGroup {
   display:flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  margin:0px 0;
   &__item {
-    background-color: green;
-    color:white;
+   margin:10px 20px;
   }
   &__img {
-    width:100px;
+    width:60px;
+  }
+  &__title {
+    text-align: center;
   }
 }
 
@@ -1569,6 +1486,7 @@ background-color: rgba(0, 0, 0, 0.6);
 footer {
   background-color: rgb(101, 72, 58);
   color: white;
+  margin-top:200px;
 }
 .footer__container {
   max-width: 1040px;

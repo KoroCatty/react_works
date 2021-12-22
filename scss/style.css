@@ -113,7 +113,11 @@ body {
   border-radius: 80%;
   margin-top: -10px;
 }
-
+@media screen and (max-width: 376px) {
+  .headerSocial__iconPerson {
+    width: 100px;
+  }
+}
 .nav {
   max-width: 1040px;
   margin: auto;
@@ -782,7 +786,7 @@ body {
   width: 100%;
   background: transparent;
   position: relative;
-  height: 460px;
+  height: 420px;
 }
 @media screen and (max-width: 376px) {
   .main_visual {
@@ -1166,6 +1170,7 @@ body {
 .article__wrapper__img--link {
   text-decoration: none;
   position: relative;
+  display: block;
 }
 
 .topics {
@@ -1364,6 +1369,11 @@ body {
     width: 7vw;
   }
 }
+.container2 {
+  background-image: url("/imgs/melbourne.jpg");
+  background-size: cover;
+}
+
 .news {
   max-width: 1040px;
   margin: auto;
@@ -1417,23 +1427,26 @@ body {
 }
 
 .skillsSquare {
-  height: 500px;
-  width: 1040px;
+  max-width: 760px;
   margin: auto;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
 }
 
 .skillsGroup {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  margin: 0px 0;
 }
 .skillsGroup__item {
-  background-color: green;
-  color: white;
+  margin: 10px 20px;
 }
 .skillsGroup__img {
-  width: 100px;
+  width: 60px;
+}
+.skillsGroup__title {
+  text-align: center;
 }
 
 .link-pagetop {
@@ -1451,6 +1464,7 @@ body {
 footer {
   background-color: #65483a;
   color: white;
+  margin-top: 200px;
 }
 
 .footer__container {
