@@ -233,7 +233,7 @@ function koro(cactus, finishObservation) {
 
 const milli = {
   // threshold: [0.2, 0.8],
-  threshold: 0.1,
+  threshold: 0.13,
   // rootMargin: '0px 0px -100px',　rootの幅を自由に変えれる。（この場合はbottomが-100px）
 }
 
