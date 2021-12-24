@@ -101,7 +101,7 @@ $(document).ready(function () {
 
 
 
-// zoom effect(個人のお客さま)
+// zoom effect
 $(function () {
   $(".article__wrapper__img--site").hover(
     function () {
