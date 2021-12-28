@@ -10,7 +10,6 @@ body {
   font-family: YakuHanMPs_Noto, "Noto Serif JP", 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, Meiryo, serif;
 }
 
-
 body {
   @include breakpoint(mobile) {
     // background-color: rgb(136, 204, 243);
@@ -54,10 +53,38 @@ body {
   display:flex;
   align-items: center;
   justify-content: space-between;
+  @include breakpoint(mobile) {
+    padding-bottom: 20px;
+      }
+      @include breakpoint(tablet) {
+    padding-bottom: 20px;
+    margin-left:12px;
+      }
+  &__img {
+    @include breakpoint(mobile) {
+      max-width:120px;
+    }
+    @include breakpoint(tablet) {
+
+    }
+    margin-left:12px;
+    width:200px;
+    &:hover {
+      opacity:0.4;
+      transition: all 0.3s ease-in-out;
+    }
+  }
 }
+
 
 .headerSocial {
   display: flex;
+  @include breakpoint(mobile) {
+    display:none;
+      }
+      @include breakpoint(tablet) {
+        display:none;
+      }
   &__icon {
     margin-left:20px;
   }
@@ -68,46 +95,39 @@ body {
   &__iconImg:last-child {
     margin-right: 5px;
   }
-  // &__iconPerson {
-  //   width:60px;
-  //   height: 40px;
-  //   border-radius: 50%;
-  //   margin-top:-10px;
-  //   @include breakpoint(mobile) {
-  //     // width:100px;
-  //   }
-  //   @include breakpoint(tablet) {
-  //   }
-  //   @include breakpoint(laptop) {
-  //   }
-  // }
+
+}
+.headerSocial__icon:hover {
+  opacity:0.4;
+  transition: all 0.3s ease-in-out;
 }
 
-.nav {
-  // max-width: 100vw;
+// About Works Contact
+.navGroup {
   max-width: 1040px;
   margin:auto;
   display: flex;
   justify-content: space-between;
-  // align-items: center;
   padding:48px 0;
-  // margin-right:60px;
   @include breakpoint(mobile) {
     // background-color: black;
+    display: none;
   }
   @include breakpoint(tablet) {
-    position: fixed;
-    top: 0px;
-    background-color: white;
-    width: 100vw;
-    z-index: 3000;
+    // position: fixed;
+    // top: 0px;
+    // background-color: rgb(255, 255, 255);
+    // width: 100vw;
+    // z-index: 3000;
+    display: none;
   }
 }
 
-.nav__left {
+.navLeft {
   display: flex;
   width: 30vw;
   padding-left: 2vw;
+  // background-color: green;
   @include breakpoint(mobile) {
     width: 80vw;
     padding-left: 2vh;
@@ -115,26 +135,17 @@ body {
   @include breakpoint(tablet) {
     width: 80vw;
     padding-left: 2vw;
+    display:block;
   }
 }
-.nav__left__primary {
+.navLeft__primary {
   list-style: none;
   a {
     text-decoration: none;
   }
 }
-.nav__left__primary--imgSmall {
-  width:200px;
-  // margin-left:-62px;
-  // margin-left:10px;
-  @include breakpoint(mobile) {
-    width: 3vh;
-  }
-  @include breakpoint(tablet) {
-    width: 3vh;
-  }
-}
-.nav__left__primary--imgLarge {
+
+.navLeft__primary--imgLarge {
   width: 220px;
   height: 21px;
   @include breakpoint(mobile) {
@@ -144,7 +155,7 @@ body {
     width: 15vh;
   }
 }
-.nav__left__secondary--img {
+.navLeft__secondary--img {
   width: 96px;
   height: 43px;
   @include breakpoint(mobile) {
@@ -157,10 +168,10 @@ body {
   }
 }
 
-.nav__right {
+
+.navRight {
   display: flex;
   align-items: center;
-  // justify-content: center;
   margin-top: -13px;
   @include breakpoint(mobile) {
     display: none;
@@ -169,29 +180,51 @@ body {
     display: none;
   }
 }
-.nav__right__menu {
+.navRight__menu {
   list-style: none;
   margin-left: 20px;
   margin-right: 15px;
 }
-.nav__right__menu--link {
+.navRight__menu--link {
   text-decoration: none;
   color: rgb(61, 61, 61);
   display: block;
   padding: 1px 0;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   text-align: center;
   letter-spacing: 2.3px;
-  transition: color 0.2s;
-  //文字をさらに太くする
-  // text-shadow: 0.7px 0.5px rgb(68, 68, 68), -0.5px 0.5px rgb(41, 41, 41);
-}
-.nav__right__menu--link:hover {
-  color: rgb(26, 26, 172);
+  // transition: color 0.2s;
+
+
+  // position: relative;
+  // display: inline-block;
+  // font-size: 2em;
+  // font-weight: 800;
+  // color: midnightblue;
+  overflow: hidden;
+  background: linear-gradient(to right, royalblue, royalblue 50%, rgb(61, 61, 61) 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+  text-decoration: none; // text decorations are clipped in WebKit browsers
+  &:hover {
+    background-position: 0 100%;
+  }
 }
 
-.nav__right__contact {
+
+// .navRight__menu--link:hover {
+//   color: red;
+
+ 
+
+// }
+
+.navRight__contact {
   list-style: none;
   margin-left: 30px;
   margin-right: 17px;
@@ -199,7 +232,6 @@ body {
     text-decoration: none;
     display: block; //真ん中寄せ
     width: 100px;
-    // margin: 0 auto;
     padding: 4px 0;
     border-radius: 50px;
     background-color: #a47862;
@@ -211,7 +243,7 @@ body {
     transition: background-color 0.2s;
   }
 }
-.nav__right__contact:before {
+.navRight__contact:before {
   border-left: 2px rgb(163, 163, 163) solid;
   content: "";
   position: relative;
@@ -219,33 +251,23 @@ body {
   left: -23px;
 }
 
-.nav__right__contact:hover a {
+.navRight__contact:hover a {
   background-color: #cc9a81;
-  // opacity:0.3;
 }
 
-.nav__right__search {
-  // list-style: none;
-  // margin-left: 30px;
-  // margin-right: 30px;
+.navRight__search {
   position: relative; //For a hidden input form
 }
 
-//いつもは非表示にする
-.nav__right__search__button__menu {
-  // height:0;
-  // width:0;
-  // overflow:hidden;
+//いつも非表示に
+.navRight__search__button__menu {
   display: none;
-  // display:flex;
 }
 
 //Hamburger Menu
 .hamburger {
   display: none;
 }
-
-// Smart Phone Size
 @include breakpoint(mobile) {
   .hamburger {
     display: block;
@@ -741,28 +763,27 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
 }
 
 // main_visual----------------------------------------
-.main_vis{
+.mainPic{
   width:100%;
   margin:0;
   padding:0;
   overflow:hidden;//スマホ時右スクロールできるのを防ぐ
   position:relative;
 }
-.main_visual {
+.mainVisual {
   width:100%;
   background: transparent;
   position: relative; 
-  height: 420px;
+  height: 360px;
   @include breakpoint(mobile) {
     height: 130vw;
   }
   @include breakpoint(tablet) {
-    height: 130vw;
-
+    height: 80vw;
   }
 }
 
-.main_visual__textArea {
+.mainVisual__textArea {
   position: absolute;
   top: 60%;
   left: 15%;
@@ -770,7 +791,6 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
   z-index: 1;
   color:rgb(255, 255, 255);
   text-shadow: -1px -1px 0 rgb(71, 71, 71);
-
   @include breakpoint(mobile) {
     width: 80vw;
     position: absolute;
@@ -780,13 +800,13 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
   @include breakpoint(tablet) {
     width: 80vw;
     position: absolute;
-    top: 30%;
+    top: 60%;
     left: 10%;
   }
 }
-.main_visual__textArea__text--primary {
+.mainVisual__textArea__text--primary {
   width: 100%;
-  font-size: 3vw;
+  font-size: 4vw;
   text-indent: 0.12em;
   line-height: 1.3;
   text-align: center;
@@ -794,13 +814,13 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
     font-size: 8vw;
   }
   @include breakpoint(tablet) {
-    font-size: 8vw;
+    font-size: 5vw;
   }
 }
 
-.main_visual__textArea__text--secondary {
+.mainVisual__textArea__text--secondary {
   width: 100%;
-  font-size: 3vw;
+  font-size: 4vw;
   text-indent: 0.12em;
   line-height: 1.3;
   text-align: center;
@@ -808,21 +828,22 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
     font-size: 8vw;
   }
   @include breakpoint(tablet) {
-    font-size: 8vw;
+    font-size: 5vw;
   }
 }
 
-.main_visual__wrapper__block {
+.mainVisual__wrapper__block {
   // overflow: hidden;
+  height:400px;
   @include breakpoint(mobile) {
     height: 115vw;
   }
   @include breakpoint(tablet) {
-    height: 130vw;
+    height: 70vw;
   }
 }
 
-.main_visual__wrapper__block img {
+.mainVisual__wrapper__block img {
   width: 100%;
   overflow: hidden;
   animation: Zoom 9s ease-in-out infinite;
@@ -841,13 +862,13 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
     height: 115vw;
   }
   @include breakpoint(tablet) {
-    height: 130vw;
+    height: 70vw;
   }
 }
 
 
 
-.main_visual__button {
+.mainVisual__button {
   text-align: center;
   position: absolute;
   top: 70%;
@@ -887,43 +908,33 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
   }
 }
 
-.main_visual__button:hover {
+.mainVisual__button:hover {
   background-color: #f8b762;
 }
 
 // slick　左右ボタン
 .slick-prev::before {
   display: none;
-  // font-size:30px;
-  // position: relative;
-  // top:0;
-  // left:30px;
 }
 .slick-next::before {
   display: none;
-  // color: #1e21f3;
-  // font-size:30px;
-  // position: relative;
-  // top:0;
-  // right:40px;
 }
 
-// --------------------------------------
-.container {
+// articleContainer --------------------------------------
+.articleContainer {
   max-width: 1040px;
   margin: auto;
-  // background-color: rgb(243, 187, 248);
+  margin-top:20px;
 }
-// article-----------------------------------------------------------
 .article {
-  // background-color: rgb(255, 184, 214);
   padding: 80px 0;
   @include breakpoint(mobile) {
-    padding-top: 40px;
-    padding-bottom: 15vw;
+    padding-top: 0px;
+    padding-bottom: 20px;
   }
   @include breakpoint(tablet) {
-    padding-top: 100px;
+    padding-top: 0px;
+    padding-bottom: 40px;
   }
 }
 
@@ -940,12 +951,8 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
   }
   to {
       opacity: 1;
+    }
   }
-  }
-
-
-
-
 
 .article__wrapper {
   display: flex;
@@ -956,12 +963,20 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
   }
   @include breakpoint(tablet) {
     display: block;
-    margin: 0 37px;
+    margin: 0 5vw;
   }
 }
 .article__wrapper__text {
   width:540px;
   margin-left:20px;
+  @include breakpoint(mobile) {
+    margin: 0;
+    max-width:95%;
+  }
+  @include breakpoint(tablet) {
+    margin: 0;
+    max-width:95%;
+  }
 }
 .article__wrapper__text__h2 {
   margin-top: 0;
@@ -970,7 +985,7 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
     margin: 0;
   }
   @include breakpoint(tablet) {
-    margin: 0 37px;
+    // margin: 0 37px;
   }
 }
 .article__wrapper__text__h2--title {
@@ -990,43 +1005,47 @@ margin-top:20px;
     font-size: 8vw;
   }
 }
-// .article__wrapper__text__h2--smallTitle {
-//   display: block;
-//   margin-top: 0px;
-//   color: #f4981c;
-//   font-family: Heebo, sans-serif;
-//   font-size: 14px;
-//   font-weight: normal;
-//   @include breakpoint(mobile) {
-//     margin-left: 2vw;
-//   }
-// }
 
 .article__wrapper__text__textArea {
   display: block;
-  margin-top: 28px;
+  margin-top: 8px;
   line-height: 2.25;
   font-size: 17px;
-  width: 80%;
-  // text-align: justify;
+  width: 90%;
   @include breakpoint(mobile) {
-    margin: 0 37px;
-    margin-left: 2vw;
-    font-size: 3vw;
-    padding-bottom: 9vw;
+    font-size: 3.8vw;
+    margin-bottom: 37px;
+    width:100%;
+    margin:auto;
+    margin-top:20px;
   }
   @include breakpoint(tablet) {
-    font-size: 12px;
-    margin-left: 37px;
+    font-size: 2.8vw;
     margin-bottom: 37px;
+    width:100%;
+    margin:auto;
+    margin-top:20px;
   }
 }
-
-
+.article__wrapper__textEmpty {
+  margin:10px 0;
+  display: block;
+}
+// 画像サイズの親 maskもこれに影響
 .article__wrapper__img{
   position: relative;
-  margin-top:120px;
+  margin-top:100px;
   margin-right:20px;
+  @include breakpoint(mobile) {
+    margin:auto;
+    margin-top:60px;
+    width:75vw;
+  }
+  @include breakpoint(tablet) {
+    margin:auto;
+    margin-top:100px;
+    width:75vw;
+  }
 }
 
 .article__wrapper__img--link.no-hover {
@@ -1035,10 +1054,19 @@ margin-top:20px;
 
 .article__wrapper__img--site {
   overflow: hidden; //hover時に子要素がはみ出るのを防ぐ
-  // height: 280px;
   margin-bottom: 30px;
   border-radius: 15px;
   position:		relative; 
+}
+
+.article__wrapper__img--link:last-child {
+  margin-top:60px;
+  @include breakpoint(mobile) {
+    margin-top:20px;
+  }
+  @include breakpoint(tablet) {
+
+  }
 }
 
 // Message and Mask
@@ -1062,16 +1090,17 @@ margin-top:20px;
 	opacity:	1;	/* マスクを表示する */
 	padding-left:	90px;	/* 右にずらす */
 }
-
+// 画像サイズ
 .article__wrapper__img--img {
   display: block;
   border-radius: 15px;
   @include breakpoint(mobile) {
-    width: 90vw;
+    width: 75vw;
+    height:140px;
   }
   @include breakpoint(tablet) {
-    width: 85vw;
-    display: block;
+    width: 75vw;
+   height:260px;
   }
   @include breakpoint(laptop) {
     width: 420px;
@@ -1100,222 +1129,23 @@ margin-top:20px;
 }
 
 
-//Topics------------------------------------------
-.topics {
-  // background-color: rgb(244, 241, 237);
-  background-color: rgb(255, 255, 255);
-  padding-top: 140px;
-  padding-bottom: 30px;
-  box-sizing: border-box;
-  @include breakpoint(mobile) {
-    padding-bottom: 0;
-  }
-  @include breakpoint(tablet) {
-  }
-}
-.topics_container {
-  // background-color:rgb(206, 72, 233) ;
-  max-width: 1040px;
-  margin: auto;
-  height: 600px;
-}
-.topics_container__texts--title {
-  margin-bottom: 12px;
-  display: block;
-  color: #65483a;
-  font-size: 40px;
-  font-weight: bold;
-  text-align: center;
-  @include breakpoint(mobile) {
-    font-size: 8vw;
-    font-weight: bold;
-    letter-spacing: 0.8vw;
-    line-height: 1;
-  }
-  @include breakpoint(tablet) {
-  }
-}
-.topics_container__texts--smallTitle {
-  display: block;
-  // margin-top: 15px;
-  color: #f4981c;
-  font-family: Heebo, sans-serif;
-  font-size: 18px;
-  font-weight: normal;
-  text-align: center;
-  @include breakpoint(mobile) {
-    font-size: 4vw;
-  }
-  @include breakpoint(tablet) {
-  }
-}
 
-.topics_container__slider {
-  width: 100%;
-  display: flex;
-  // justify-content: space-around;
-}
-// 各ブロック
-.topics_container__slider__block {
-  width: 320px;
-  // height: 370px;
-  margin-right: 20px;
-  margin-left: 20px;
-  margin-top: 20px;
-  // background-color: rgb(244, 241, 237);
-  background-color: white;
-  position: relative; 
-  overflow: hidden;
-  // border-radius: 40px;
-}
-
-// hover effect
-.topics_container__slider__block:hover {
-  transition: all 0.4s;
-  opacity: 0.8;
-  background-color: white;
-}
-.topics_container__slider__block:hover .topics_container__slider__txt {
-  transition: all 0.4s;
-  opacity: 0.8;
-  background-color: white;
-}
-
-.topics_container__slider__block--link {
-  text-decoration: none;
-  overflow: hidden;
-  display: block;
-  margin:0;
-  // background-color: green;
-  position:relative;
-}
-// .topics_container__slider__block--img {
-//   width:100%;
-//   overflow: hidden;
-//   margin: 20px 10px 20px 30px;
-//   vertical-align:top;
-// }
-.topics_container__slider__block--img {
-    width: 95%;
-    height: 350px;
-    display: block;
-    border-radius: 5px;
-    margin: 0 auto 0 auto;
-    padding:5px 5px;
-    background-color: rgb(199, 199, 199);
-    // vertical-align:top;
-    // border-radius: 40px;
-}
-// sliderの各画像のzoom effect
-.topics_container__slider__block:hover img {
-  transform: scale(1.1);
-  transition: all 0.4s ease;
-}
-
-.topics_container__slider__txt {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.topics_container__slider__txt time {
-  color: #f4981c;
-  font-family: Heebo, sans-serif;
-  line-height: 1.5;
-}
-.topics_container__slider__txt h3 {
-  margin: 0;
-  color: #65483a;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1.5;
-}
-.topics_container__slider__txt p {
-  margin-top: 8px;
-  font-size: 14px;
-  line-height: 1.5;
-  color: rgb(72, 72, 72);
-  font-weight: 600;
-}
-
-.topics_container__slider__block__tag {
-  position: absolute;
-  left: 27%;
-  top: 80%;
-  min-width: 90px;
-  padding: 3px 10px;
-  // border-radius: 2px;
-  background-color: rgba(0,0,0,0.4);
-  border-radius: 50px;
-  color: #fff;
-  font-size: 2.5vw;
-  text-align: center;
-}
-
-.topics_container__slider .slick-arrow_prev {
-  position: relative;
-  top: 100px;
-  right: 30px;
-  font-size: 130px;
-  content: "";
-  display: block;
-  z-index: 40000;
-  @include breakpoint(mobile) {
-    position: relative;
-    top: 310px;
-    right: -20px;
-  }
-  @include breakpoint(tablet) {
-    position: relative;
-    top: 300px;
-    right: 0px;
-  }
-  img {
-    width: 3vw;
-    @include breakpoint(mobile) {
-      width: 7vw;
-    }
-    @include breakpoint(tablet) {
-    }
-  }
-}
-.topics_container__slider .slick-arrow_next {
-  position: relative;
-  top: 100px;
-  right: -20px;
-  font-size: 130px;
-  content: "";
-  display: block;
-  @include breakpoint(mobile) {
-    position: relative;
-    top: 310px;
-    right: 20px;
-  }
-  @include breakpoint(tablet) {
-    position: relative;
-    top: 300px;
-    right: 10px;
-  }
-  img {
-    width: 3vw;
-    @include breakpoint(mobile) {
-      width: 7vw;
-    }
-    @include breakpoint(tablet) {
-    }
-  }
-}
-
-//hover effect
-
-//News-------------------------------------------
-.container2 {
-  // background-image: url("/imgs/melbourne.jpg");
+// Skills-------------------------------------------
+.skillsPart {
   background-image: url("https://github.com/KoroCatty/works/blob/main/imgs/melbourne.jpg?raw=true");
-//   background-color: rgb(244, 241, 237);
-// background: no-repeat;
 background-size: cover;
 margin-top:20px;
+@include breakpoint(mobile) {
+padding-bottom: 40px;
+padding-left:8px;
+padding-right:8px;
 }
-.news {
+@include breakpoint(tablet) {
+  padding-left:8px;
+padding-right:8px;
+}
+}
+.skills {
   // background-color:rgb(255, 255, 255) ;
   max-width: 1040px;
   margin: auto;
@@ -1329,17 +1159,16 @@ margin-top:20px;
   @include breakpoint(tablet) {
   }
 }
-.news_container__h2 {
+.skillsContainer__h2 {
   width: 100%;
   margin: 0px;
   padding-top:30px;
 }
-.news_container__h2--title {
+.skillsContainer__h2--title {
   text-align: center;
   display: block;
   color: #65483a;
-  font-size: 38px;
-  font-weight: bold;
+  font-size: 50px;
   margin: 0px;
   @include breakpoint(mobile) {
     font-size: 7vw;
@@ -1348,7 +1177,7 @@ margin-top:20px;
   @include breakpoint(tablet) {
   }
 }
-.news_container__h2--smallTitle {
+.skillsContainer__h2--smallTitle {
   text-align: center;
   display: block;
   margin-top: 15px;
@@ -1364,7 +1193,7 @@ margin-top:20px;
   }
 }
 
-.news_container__h2--button:hover {
+.skillsContainer__h2--button:hover {
   opacity: 0.6;
 }
 
@@ -1386,6 +1215,11 @@ border-radius: 30px;
   &__item {
    margin:8px 40px;
    width:100px;
+   @include breakpoint(mobile) {
+     margin:8px 20px;
+  }
+  @include breakpoint(tablet) {
+  }
   }
   &__img {
     width:60px;
@@ -1394,11 +1228,185 @@ border-radius: 30px;
   }
   &__title {
     text-align: center;
+    margin-top:6px;
   }
 }
 
+// Works ------------------------------------------
+.works {
+  // background-color: rgb(244, 241, 237);
+  background-color: rgb(255, 255, 255);
+  padding-top: 140px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  @include breakpoint(mobile) {
+    padding-bottom: 80px;
+    padding-top: 60px;
+  }
+  @include breakpoint(tablet) {
+  }
+}
+.worksContainer {
+  // background-color:rgb(206, 72, 233) ;
+  max-width: 1040px;
+  margin: auto;
+  // height: 600px;
+}
+.worksContainer__texts--title {
+  margin-bottom: 12px;
+  display: block;
+  color: #65483a;
+  font-size: 50px;
+  text-align: center;
+  @include breakpoint(mobile) {
+    font-size: 8vw;
+    font-weight: bold;
+    letter-spacing: 0.8vw;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  @include breakpoint(tablet) {
+  }
+}
+.worksContainer__texts--smallTitle {
+  display: block;
+  // margin-top: 15px;
+  color: #f4981c;
+  font-family: Heebo, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  @include breakpoint(mobile) {
+    font-size: 4vw;
+  }
+  @include breakpoint(tablet) {
+  }
+}
 
-//footer------------------------------------------------------------
+.worksContainer__slider {
+  width: 100%;
+  display: flex;
+  // justify-content: space-around;
+}
+// 各ブロック
+.worksContainer__slider__block {
+  width: 320px;
+  // height: 370px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  // background-color: rgb(244, 241, 237);
+  background-color: white;
+  position: relative; 
+  overflow: hidden;
+  border-radius: 45px;
+  @include breakpoint(mobile) {
+    // width:300px;
+  }
+  @include breakpoint(tablet) {
+  }
+}
+
+// hover effect
+.worksContainer__slider__block:hover {
+  transition: all 0.4s;
+  opacity: 0.8;
+  background-color: white;
+}
+.worksContainer__slider__block:hover .worksContainer__slider__txt {
+  transition: all 0.4s;
+  opacity: 0.8;
+  background-color: white;
+}
+
+.worksContainer__slider__block--link {
+  text-decoration: none;
+  overflow: hidden;
+  display: block;
+  margin:0;
+  // background-color: green;
+  position:relative;
+}
+// .topics_container__slider__block--img {
+//   width:100%;
+//   overflow: hidden;
+//   margin: 20px 10px 20px 30px;
+//   vertical-align:top;
+// }
+.worksContainer__slider__block--img {
+    width: 95%;
+    height: 350px;
+    display: block;
+    border-radius: 45px;
+    margin: 0 auto 0 auto;
+    padding:1px 1px;
+    background-color: rgb(243, 243, 243);
+    // vertical-align:top;
+    // border-radius: 40px;
+    @include breakpoint(mobile) {
+     max-width:400px;
+    }
+    @include breakpoint(tablet) {
+    }
+}
+// sliderの各画像のzoom effect
+.worksContainer__slider__block:hover img {
+  transform: scale(1.1);
+  transition: all 0.4s ease;
+}
+
+.worksContainer__slider__txt {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.worksContainer__slider__txt time {
+  color: #f4981c;
+  font-family: Heebo, sans-serif;
+  line-height: 1.5;
+}
+.worksContainer__slider__txt h3 {
+  margin: 0;
+  color: #65483a;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.worksContainer__slider__txt p {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgb(72, 72, 72);
+  font-weight: 600;
+}
+
+.worksContainer__slider__block__tag {
+  position: absolute;
+  left: 27%;
+  top: 80%;
+  min-width: 90px;
+  padding: 3px 10px;
+  // border-radius: 2px;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+.worksContainer__slider .slick-arrow_prev {
+  display: none;
+  z-index: 40000;
+  img {
+    display: none;
+  }
+}
+.worksContainer__slider .slick-arrow_next {
+  display: none;
+  img {
+    display: none;
+  }
+}
+
 
 // ------  fixed button -----------------------
 .link-pagetop{
@@ -1414,13 +1422,24 @@ border-radius: 30px;
 }
 .arrow__up {
   width:40px;
+  @include breakpoint(mobile) {
+width:20px;
+  }
+  @include breakpoint(tablet) {
+  }
 }
 
+// footer-----------------------------------
 footer {
   background-color: rgba(78, 70, 63, 0.19);
   color: white;
   margin-top:120px;
   padding-bottom: 20px;
+  @include breakpoint(mobile) {
+    margin-top:20px;
+  }
+  @include breakpoint(tablet) {
+  }
 }
 .footerContainer {
   max-width: 1040px;
@@ -1436,6 +1455,10 @@ footer {
   }
   &__link{
     display: block;
+    &:hover {
+      opacity:0.4;
+      transition: all 0.3s ease-in-out;
+    }
   }
   &__link:nth-child(2) {
     margin-right:40px;

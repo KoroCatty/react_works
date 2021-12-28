@@ -19,9 +19,9 @@
 
 //slider
 // 1つ目
-// slick slider for main_visual
+// slick slider for mainVisual
 $(document).ready(function () {
-  $('.main_visual__wrapper').slick({
+  $('.mainVisual__wrapper').slick({
     autoplay: true,
     autoplaySpeed: 2000,
     infinite: true,
@@ -49,7 +49,7 @@ $(document).ready(function () {
 
 // 2つ目（Top画像の中の文字）
 $(document).ready(function () {
-  $('.main_visual__textArea').slick({
+  $('.mainVisual__textArea').slick({
     autoplay: true,
     autoplaySpeed: 2000,
     infinite: true,
@@ -75,9 +75,9 @@ $(document).ready(function () {
 
 
 // 3つ目
-//slick slider for topics_container__slider (ポートフォリオ)
+//slick slider for works (ポートフォリオ)
 $(document).ready(function () {
-  $('.topics_container__slider').slick({
+  $('.worksContainer__slider').slick({
     autoplay: true,
     autoplaySpeed: 2000,
     infinite: true,
@@ -88,9 +88,9 @@ $(document).ready(function () {
     nextArrow: '<span class="slick-arrow_next"><img src="imgs/next_on.png"></span>',
     responsive: [
       {
-        breakpoint: 767, //767px以下のサイズに適用
+        breakpoint: 410, //767px以下のサイズに適用
         settings: {
-          slidesToShow: 2
+          slidesToShow: 1
         }
       }
     ]
@@ -250,4 +250,29 @@ targets.forEach(target => {
 //   opacity: 1;
 // }
 
+
+// Top　へ戻るボタン
+window.addEventListener("scroll", function () {
+  let scroll = document.documentElement.scrollTop;
+  // document.getElementsById("scrollValue").textContent = scroll;
+  console.log(scroll);
+
+  //スクロール値が２００を超えたらid=addingのあるタグにlink-pagetopを付け足し、ｃｓｓに予め記載されたものが起動
+  if (scroll > 200) {
+    document.getElementById("adding").classList.add("link-pagetop");
+  }
+  //200以下で上で付加したものを取り除く
+  if (scroll < 200) {
+    document.getElementById("adding").classList.remove("link-pagetop");
+  }
+}
+);
+
+const pagetopBtn = document.querySelector('#adding');
+pagetopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
 
