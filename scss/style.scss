@@ -811,21 +811,13 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
   line-height: 1.3;
   text-align: center;
   @include breakpoint(mobile) {
-    font-size: 7vw;
+    font-size: 6.5vw;
   }
   @include breakpoint(tablet) {
     font-size: 5.8vw;
   }
 }
-.textSp {
-  display: none;
-  @include breakpoint(mobile) {
-   display: block;
-   font-size:7vw;
-  }
-  @include breakpoint(tablet) {
-  }
-}
+
 .mainVisual__textArea__text--secondary {
   width: 100%;
   font-size: 4vw;
@@ -1526,4 +1518,29 @@ footer {
     color:rgb(70, 70, 70);
     text-align: center;
   }
+}
+
+
+
+
+
+// ----------------------
+.langWrap{
+  background: #333;
+}
+.langWrap__switch{
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 15px;
+  font-weight: bold;
+  background: #555656;
+  font-size: 18px;
+}
+.langWrap__switch.active{
+  background: #f21313;
+}
+.content{
+  margin-top: 20px;
+  font-size: 20px;
 }

@@ -862,7 +862,7 @@ body {
 }
 @media screen and (max-width: 420px) {
   .mainVisual__textArea__text--primary {
-    font-size: 7vw;
+    font-size: 6.5vw;
   }
 }
 @media screen and (min-width: 420px) and (max-width: 768px) {
@@ -871,15 +871,6 @@ body {
   }
 }
 
-.textSp {
-  display: none;
-}
-@media screen and (max-width: 420px) {
-  .textSp {
-    display: block;
-    font-size: 7vw;
-  }
-}
 .mainVisual__textArea__text--secondary {
   width: 100%;
   font-size: 4vw;
@@ -1621,4 +1612,27 @@ footer {
 .footerContact__email {
   color: #464646;
   text-align: center;
+}
+
+.langWrap {
+  background: #333;
+}
+
+.langWrap__switch {
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 15px;
+  font-weight: bold;
+  background: #555656;
+  font-size: 18px;
+}
+
+.langWrap__switch.active {
+  background: #f21313;
+}
+
+.content {
+  margin-top: 20px;
+  font-size: 20px;
 }

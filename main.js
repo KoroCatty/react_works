@@ -276,3 +276,65 @@ pagetopBtn.addEventListener('click', () => {
   });
 });
 
+
+// Change Language------------
+// 赤を付けはずし
+const langEl = document.querySelector('.langWrap');
+
+const link = document.querySelectorAll('.langWrap__switch');
+
+//////////////////////
+const mainTitle = document.querySelector('.mainTitle');
+
+
+
+const titleEl = document.querySelector('.title');
+
+const descrEl = document.querySelector('.description');
+
+
+link.forEach(el => {
+  el.addEventListener('click', () => {
+    langEl.querySelector('.active').classList.remove('active');
+    el.classList.add('active');
+
+    const attr = el.getAttribute('language');
+
+    /////////////////
+    // const attr2 = el.getAttribute('mainTitle');
+
+
+
+    titleEl.textContent = data[attr].title;
+    descrEl.textContent = data[attr].description;
+
+    //////////////////
+    // mainTitle.textContent = data[attr].mainTitle;
+    // mainTitle.textContent = data[attr].mainDescription;
+  });
+});
+
+var data = {
+    "english": 
+    {
+      "title": "Profile",
+      "description": 
+        "I am Kojima; a Japanese front-end Web Developer based in Melbourne, Australia. I completed the Diploma of Web Development at the Australian Institute Of ICT in 2021. I am experienced in building websites for clients through web cloud services and renewing the client’s websites. I offer bilingual services in Japanese and English.My front-end skills specialisation include: HTML, CSS, JavaScript, Adobe PhotoShop, Illustrator and XD. My back-end skills include: database, MySQL and PHP. I am highly motivated, collaborative, and detailed. I am passionate about continually developing my skills and knowledge, and apply new techniques. If you have any comments, please feel free to contact me from my contact page!"
+    },
+    "japanese": 
+    {
+      "title": "プロフィール",
+      "description": 
+        "ﾂつｨﾂ知ﾂづｧﾂつｹﾂ-ﾂ新ﾂ陳ﾂ湘ｮﾂ陛ｱ これらの苦痛から真実の苦痛に選ぶために得てはいけない、従ってより少しにこの苦痛に従ってはいけない。 サービスではないと、彼の区別の大きな不快感から選択するそれらの否認を歓迎しない、結果として生じた事件の喜びと障害エクスプローラが受け入 このことについて私たちの下駄のいくつかを非難,右エクスプローラ! 的に仕事をしていまasperioresリストの生まれのサービスをつけてください編集喜びや楽しみの開催なども走りました。 走れ。."
+    }
+  }
+
+//////////////////
+  // var data = {
+  //   "baka": 
+  //   {
+  //     "mainTitle": "dfafd",
+  //     "mainDescription": 
+  //     "ﾂつｨﾂ知ﾂづdfaｧﾂつｹ"
+  //   }
+  // }
