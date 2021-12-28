@@ -88,7 +88,7 @@ $(document).ready(function () {
     nextArrow: '<span class="slick-arrow_next"><img src="imgs/icons/arrow_right.svg"></span>',
     responsive: [
       {
-        breakpoint: 410, //767px以下のサイズに適用
+        breakpoint: 420, //767px以下のサイズに適用
         settings: {
           slidesToShow: 1
         }

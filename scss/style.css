@@ -862,7 +862,7 @@ body {
 }
 @media screen and (max-width: 420px) {
   .mainVisual__textArea__text--primary {
-    font-size: 6.5vw;
+    font-size: 7vw;
   }
 }
 @media screen and (min-width: 420px) and (max-width: 768px) {
