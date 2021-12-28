@@ -84,8 +84,8 @@ $(document).ready(function () {
     slidesToShow: 2.3,
     slidesToScroll: 1,
     arrows: true,
-    prevArrow: '<span class="slick-arrow_prev"><img src="imgs/prev_on.png"></span>',
-    nextArrow: '<span class="slick-arrow_next"><img src="imgs/next_on.png"></span>',
+    prevArrow: '<span class="slick-arrow_prev"><img src="imgs/icons/arrow_left.svg"></span>',
+    nextArrow: '<span class="slick-arrow_next"><img src="imgs/icons/arrow_right.svg"></span>',
     responsive: [
       {
         breakpoint: 410, //767px以下のサイズに適用

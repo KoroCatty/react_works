@@ -792,15 +792,15 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
   color:rgb(255, 255, 255);
   text-shadow: -1px -1px 0 rgb(71, 71, 71);
   @include breakpoint(mobile) {
-    width: 80vw;
+    width: 100vw;
     position: absolute;
     top: 30%;
     left: 10%;
   }
   @include breakpoint(tablet) {
-    width: 80vw;
+    width: 100vw;
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 10%;
   }
 }
@@ -811,13 +811,21 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
   line-height: 1.3;
   text-align: center;
   @include breakpoint(mobile) {
-    font-size: 8vw;
+    font-size: 6.5vw;
   }
   @include breakpoint(tablet) {
-    font-size: 5vw;
+    font-size: 5.8vw;
   }
 }
-
+.textSp {
+  display: none;
+  @include breakpoint(mobile) {
+   display: block;
+   font-size:7vw;
+  }
+  @include breakpoint(tablet) {
+  }
+}
 .mainVisual__textArea__text--secondary {
   width: 100%;
   font-size: 4vw;
@@ -828,7 +836,7 @@ background-image: url(https://www.jz-tamago.co.jp/wp/wp-content/themes/jz-tamago
     font-size: 8vw;
   }
   @include breakpoint(tablet) {
-    font-size: 5vw;
+    font-size: 5.5vw;
   }
 }
 
@@ -999,10 +1007,11 @@ margin-top:20px;
   @include breakpoint(mobile) {
     font-size: 7vw;
     letter-spacing: 1vw;
-    margin-left: 2vw;
+    margin:0;
   }
   @include breakpoint(tablet) {
     font-size: 8vw;
+    margin:0;
   }
 }
 
@@ -1013,7 +1022,7 @@ margin-top:20px;
   font-size: 17px;
   width: 90%;
   @include breakpoint(mobile) {
-    font-size: 3.8vw;
+    font-size: 4vw;
     margin-bottom: 37px;
     width:100%;
     margin:auto;
@@ -1198,8 +1207,6 @@ padding-right:8px;
 }
 
 .skillsSquare {
-  // display: flex;
-  // height: 500px;
 max-width:760px;
 margin:auto;
 background-color:rgba(255,255,255,0.5) ;
@@ -1207,7 +1214,6 @@ border-radius: 30px;
 }
 
 .skillsGroup {
-  // width:100px;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -1215,6 +1221,7 @@ border-radius: 30px;
   &__item {
    margin:8px 40px;
    width:100px;
+   text-align: center;
    @include breakpoint(mobile) {
      margin:8px 20px;
   }
@@ -1385,25 +1392,59 @@ border-radius: 30px;
   top: 80%;
   min-width: 90px;
   padding: 3px 10px;
-  // border-radius: 2px;
   background-color: rgba(0,0,0,0.4);
   border-radius: 50px;
   color: #fff;
   font-size: 2.5vw;
   text-align: center;
+  @include breakpoint(mobile) {
+    position: absolute;
+    left: 34%;
+    top: 80%;
+  }
+  @include breakpoint(tablet) {
+  }
 }
+
 
 .worksContainer__slider .slick-arrow_prev {
   display: none;
-  z-index: 40000;
+  @include breakpoint(mobile) {
+  display: block;
+  position:absolute;
+  top:200px;
+  left:0;
+  }
+  @include breakpoint(tablet) {
+    display:none;
+  }
   img {
     display: none;
+    @include breakpoint(mobile) {
+      display: block;
+        }
   }
 }
 .worksContainer__slider .slick-arrow_next {
   display: none;
+  @include breakpoint(mobile) {
+    display: block;
+    position:absolute;
+    top:200px;
+    right:0;
+    @include breakpoint(tablet) {
+      display: none;
+     }
+    }
   img {
     display: none;
+    @include breakpoint(mobile) {
+      display: block;    display: block;
+  
+        }
+        @include breakpoint(tablet) {
+          display: none;
+        }
   }
 }
 
@@ -1412,13 +1453,21 @@ border-radius: 30px;
 .link-pagetop{
   display:block;
   position: fixed;
-  right: 30px;
+  right: 20px;
   bottom: 0px;
   display: none;
   color:orange ;
   font-size: 45px;
   transition: all 0.8s ease;
   transform:translateY(-100px);
+  @include breakpoint(mobile) {
+    position: fixed;
+    right: 15px;
+    bottom:-40px;
+  }
+  @include breakpoint(tablet) {
+
+  }
 }
 .arrow__up {
   width:40px;
@@ -1451,7 +1500,7 @@ footer {
     padding-bottom: 6vw;
   }
   @include breakpoint(tablet) {
-    padding-bottom: 70px;
+    padding-bottom: 50px;
   }
   &__link{
     display: block;
