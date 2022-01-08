@@ -63,6 +63,7 @@ border-top: 2px solid var(--primary-orange);
   background-size:cover;
   background-position: center;
   height: 90vh;
+  // z-index: 0;
 }
 
 .main-info {
@@ -126,12 +127,48 @@ margin-top:2rem;
   height:100vh;
   width: 95vw;
   z-index:1;
+  
+  // overflow-y:hidden;
 }
+// .tsparticles-canvas-el {
+//   position:absolute;
+//   height:100vh;
+//   width: 95vw;
+//   z-index:1;
+// }
 
 @media(max-width:768px) {
-  .particles__canvas {
-    display:non
+  .particles__canvas{
+    display:none;
   }
+}
+
+// About Me-------------
+// .container {
+//   z-index:22;
+// }
+.photo__wrap {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+.mePhoto {
+  width: 20vw;
+  height:25vh;
+  border-radius: 50%;
+  padding:0.1vw;
+  border: 1px solid var(--primary-orange);
+}
+@media(max-width: 468px) {
+  .mePhoto {
+    width:30vw;
+    height: 15vh;
+  }
+}
+
+.author__heading {
+  color: var(--primary-orange);
+  text-transform: uppercase;
 }
 
 
