@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+:root {
+  --primary-white: #fff;
+  --primary-orange: #f9ab00;
+  --primary-dark: rgba(255, 255, 255, 0);
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: lightgreen;
+}
+
+
+// Navbar-----------------------------
+// pxに rem converter (NinjaUnits) 使用
+.headerLogo {
+  width:16.25rem;
+}
+// Menu Links -----------------
+nav a.nav-link {
+  letter-spacing:0.0375rem;
+  cursor:pointer;
+}
+
+nav ul li {
+  text-transform: uppercase;
+}
+
+// 定義したものを呼び出し、bootstrapのルールを上書きするための !important
+.navbar-nav > li > a {
+  color: var(--primary-white)!important ;
+  margin-right:0.75rem;
+  margin-left:0.75rem;
+
+  border-top: 2px solid var(--primary-dark);//To prevent move when hovered
+}
+
+.navbar-brand {
+  max-width:117.25rem;
+  padding:0 !important;
+  height:6rem !important;
+}
+
+.navbar-nav li a:hover{
+border-top: 2px solid var(--primary-orange);
+
+}
