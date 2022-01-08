@@ -4,15 +4,20 @@
   --primary-white: #fff;
   --primary-orange: #f9ab00;
   --primary-dark: rgba(255, 255, 255, 0);
+  --primary-red: #ef4035;
+  --primary-hover-red: #f33501;
 }
 
 body {
   font-family: 'Roboto Condensed', sans-serif;
-  background-color: lightgreen;
+  // background-color: lightgreen;
 }
 
 
 // Navbar-----------------------------
+nav {
+  z-index: 2
+}
 // pxに rem converter (NinjaUnits) 使用
 .headerLogo {
   width:16.25rem;
@@ -41,8 +46,92 @@ nav ul li {
   padding:0 !important;
   height:6rem !important;
 }
+@media(max-width: 768px) {
+  .navbar-brand {
+    width:20vw;
+  }
+}
 
 .navbar-nav li a:hover{
 border-top: 2px solid var(--primary-orange);
-
 }
+
+// HEADER----------------------------------
+.header-wrapper {
+  position: relative;
+  background: url("../src/wall-and-laptop-background.jpg") no-repeat;
+  background-size:cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.main-info {
+  // place center both vertically and horizontally
+  position:absolute;
+  top: 0;
+  left:0;
+  right:0;
+  bottom:0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index:1;
+}
+
+.main-infoText {
+  color: var(--primary-white);
+  text-transform: uppercase;
+}
+@media(max-width: 768px) {
+  .main-infoText {
+    font-size:5vw;
+  }
+}
+
+// Typed Text (animation effect)----------------------
+.typed-text {
+  font-size: 2rem;
+  color: var(--primary-white);
+}
+
+@media(max-width: 768px) {
+  .typed-text {
+    font-size:4vw;
+  }
+}
+
+// Header Main Offer Button------------
+.btnMain__offer {
+border: 1px solid var(--primary-red);
+text-decoration: none;
+text-transform: uppercase;
+border-radius:0;
+// padding: 8px 12px;
+padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+color: var(--primary-white);
+margin-top:2rem;
+}
+.btnMain__offer:hover {
+  background-color: var(--primary-red);
+  color:var(--primary-white);
+  transition:all 0.3s ease-in-out;
+}
+
+//Particle JS------------------------
+.particles__canvas {
+  position:absolute;
+  height:100vh;
+  width: 95vw;
+  z-index:1;
+}
+
+@media(max-width:768px) {
+  .particles__canvas {
+    display:non
+  }
+}
+
+
