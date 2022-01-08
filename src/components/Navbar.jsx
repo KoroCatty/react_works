@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from "../logo.png";
 
-// REACT FONT AWESOME IMPORTS ()
+// REACT FONT AWESOME IMPORTS
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
