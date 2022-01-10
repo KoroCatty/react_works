@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
 
 :root {
   --primary-white: #fff;
   --primary-light-grey: #f4f4f4;
+  --primary-grey: #ccd1d9;
+  --primary-dark-grey: #666666;
   --primary-orange: #f9ab00;
   --primary-dark: rgba(255, 255, 255, 0);
   --primary-red: #ef4035;
@@ -10,23 +12,22 @@
 }
 
 body {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   // background-color: lightgreen;
 }
 
-
 // Navbar-----------------------------
 nav {
-  z-index: 2
+  z-index: 2;
 }
 // pxに rem converter (NinjaUnits) 使用
 .headerLogo {
-  width:16.25rem;
+  width: 16.25rem;
 }
 // Menu Links -----------------
 nav a.nav-link {
-  letter-spacing:0.0375rem;
-  cursor:pointer;
+  letter-spacing: 0.0375rem;
+  cursor: pointer;
 }
 
 nav ul li {
@@ -35,33 +36,33 @@ nav ul li {
 
 // 定義したものを呼び出し、bootstrapのルールを上書きするための !important
 .navbar-nav > li > a {
-  color: var(--primary-white)!important ;
-  margin-right:0.75rem;
-  margin-left:0.75rem;
+  color: var(--primary-white) !important ;
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
 
-  border-top: 2px solid var(--primary-dark);//To prevent move when hovered
+  border-top: 2px solid var(--primary-dark); //To prevent move when hovered
 }
 
 .navbar-brand {
-  max-width:117.25rem;
-  padding:0 !important;
-  height:6rem !important;
+  max-width: 117.25rem;
+  padding: 0 !important;
+  height: 6rem !important;
 }
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .navbar-brand {
-    width:20vw;
+    width: 20vw;
   }
 }
 
-.navbar-nav li a:hover{
-border-top: 2px solid var(--primary-orange);
+.navbar-nav li a:hover {
+  border-top: 2px solid var(--primary-orange);
 }
 
 // HEADER----------------------------------
 .header-wrapper {
   position: relative;
   background: url("../src/wall-and-laptop-background.jpg") no-repeat;
-  background-size:cover;
+  background-size: cover;
   background-position: center;
   height: 90vh;
   // z-index: 0;
@@ -69,27 +70,27 @@ border-top: 2px solid var(--primary-orange);
 
 .main-info {
   // place center both vertically and horizontally
-  position:absolute;
+  position: absolute;
   top: 0;
-  left:0;
-  right:0;
-  bottom:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  z-index:1;
+  z-index: 1;
 }
 
 .main-infoText {
   color: var(--primary-white);
   text-transform: uppercase;
 }
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .main-infoText {
-    font-size:5vw;
+    font-size: 5vw;
   }
 }
 
@@ -99,36 +100,36 @@ border-top: 2px solid var(--primary-orange);
   color: var(--primary-white);
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .typed-text {
-    font-size:4vw;
+    font-size: 4vw;
   }
 }
 
 // Header Main Offer Button------------
 .btnMain__offer {
-border: 1px solid var(--primary-red);
-text-decoration: none;
-text-transform: uppercase;
-border-radius:0;
-// padding: 8px 12px;
-padding: 0.625rem 0.75rem 0.75rem 0.75rem;
-color: var(--primary-white);
-margin-top:2rem;
+  border: 1px solid var(--primary-red);
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0;
+  // padding: 8px 12px;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  color: var(--primary-white);
+  margin-top: 2rem;
 }
 .btnMain__offer:hover {
   background-color: var(--primary-red);
-  color:var(--primary-white);
-  transition:all 0.3s ease-in-out;
+  color: var(--primary-white);
+  transition: all 0.3s ease-in-out;
 }
 
 //Particle JS------------------------
 .particles__canvas {
-  position:absolute;
-  height:100vh;
+  position: absolute;
+  height: 100vh;
   width: 95vw;
-  z-index:1;
-  
+  z-index: 1;
+
   // overflow-y:hidden;
 }
 // .tsparticles-canvas-el {
@@ -138,9 +139,9 @@ margin-top:2rem;
 //   z-index:1;
 // }
 
-@media(max-width:768px) {
-  .particles__canvas{
-    display:none;
+@media (max-width: 768px) {
+  .particles__canvas {
+    display: none;
   }
 }
 
@@ -150,19 +151,19 @@ margin-top:2rem;
 // }
 .photo__wrap {
   display: flex;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
 }
 .mePhoto {
   width: 20vw;
-  height:25vh;
+  height: 25vh;
   border-radius: 50%;
-  padding:0.1vw;
+  padding: 0.1vw;
   border: 1px solid var(--primary-orange);
 }
-@media(max-width: 468px) {
+@media (max-width: 468px) {
   .mePhoto {
-    width:30vw;
+    width: 30vw;
     height: 15vh;
   }
 }
@@ -174,33 +175,33 @@ margin-top:2rem;
 
 // Services -------------------------
 .services {
-  width:95vw;
-margin:auto;
-text-align: center;
-padding-bottom: 2rem;
-background-color: var(--primary-light-grey);
-&__title {
-  // color: var(--primary-dark);
-  text-transform: uppercase;
+  width: 95vw;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 2rem;
+  background-color: var(--primary-light-grey);
+  &__title {
+    // color: var(--primary-dark);
+    text-transform: uppercase;
   }
 }
 
 .circleIconBg {
   position: relative;
-  margin: 0.375rem auto;//真ん中寄せ
+  margin: 0.375rem auto; //真ん中寄せ
   background-color: var(--primary-orange);
-  border-radius:  50%;
-  width:3.125rem;
+  border-radius: 50%;
+  width: 3.125rem;
   height: 3.125rem;
 }
 
 .circleIcon {
-font-size:1.4rem;
-color: var(--primary-white);
-position: absolute;
-top:50%;
-left:50%;
-transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+  color: var(--primary-white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .servicesContainer__rowBox {
@@ -216,24 +217,103 @@ transform: translate(-50%, -50%);
   transition: all 0.3s ease-in-out;
 }
 
-
 .servicesContainer__rowBox:hover .circleIconBg {
-  background-color:white;
+  background-color: white;
   transition: all 0.3s ease-in-out;
 }
 .servicesContainer__rowBox:hover .circleIcon {
-  color:black;
+  color: black;
   transition: all 0.3s ease-in-out;
 }
-.servicesContainer__rowBox:hover .servicesContainer__rowBox--title
- {
-  color:white;
+.servicesContainer__rowBox:hover .servicesContainer__rowBox--title {
+  color: white;
   transition: all 0.3s ease-in-out;
 }
-.servicesContainer__rowBox:hover .servicesContainer__rowBox--text
- {
-  color:white;
+.servicesContainer__rowBox:hover .servicesContainer__rowBox--text {
+  color: white;
   transition: all 0.3s ease-in-out;
 }
 
+// Experience----------------
+.experience {
+  padding: 0.7rem;
+}
+.experience__wrapper {
+  position: relative;
+  padding: 3.125rem 0;
+  overflow: hidden;
+}
 
+.experienceContainer__heading {
+  text-transform: uppercase;
+  color: var(--primary-orange);
+}
+//線引きする
+.experience__wrapper::before {
+  background-color: grey;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 50%;
+  margin-left: -0.0625rem;
+  width: 0.125rem;
+  height: 100%;
+  z-index: 1;
+}
+
+.timeline-block {
+  width: calc(50% + 0.5rem);
+  display: flex;
+  justify-content: space-between;
+  clear: both; //clearプロパティは、floatの回り込みを解除するプロパティです。 clearプロパティは、float指定した要素の次の要素に指定します。 float要素が連続している場合、一番最後のfloat要素の次の要素に指定します。
+}
+.timeline-block-right {
+  float: right;
+  // transform: translateX(-2.5%);
+}
+.timeline-block-left {
+  float: left;
+  direction: rtl; //right to left
+}
+.marker {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0.3123rem solid grey;
+  background-color: orange;
+  margin-top: 0.625rem;
+  z-index: 3;
+}
+
+.timelineContent {
+  width: 95%;
+  padding: 0 1rem;
+  color: var(--primary-dark-grey);
+  direction: ltr;
+  &__heading {
+    color: red;
+  }
+  // &__text {
+  //   direction:ltr;
+  // }
+}
+
+// Media---------------
+@media (max-width: 768px) {
+  .experience__wrapper .container{
+    padding-left:0;
+  }
+  .experience__wrapper::before {
+    left: 0.5rem;
+    margin-bottom: 1.875rem;
+  }
+  .timeline-block-right {
+    float: none;
+    width:100%;
+  }
+  .timeline-block-left {
+    float: none;
+    direction:ltr;
+    width:100%;
+  }
+}

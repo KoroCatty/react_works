@@ -12,7 +12,7 @@ export const Services = () => {
           <div className="row servicesContainer__row">
 
             {/* 1 */}
-            <div className="col-md-3 col-sm-6">
+            <div className="col-lg-3 col-md-6 col-sm-6">
               <div className="servicesContainer__rowBox">
                 <div className="circleIconBg">
                   <FontAwesomeIcon className="circleIcon" icon={faDesktop} size="2x" />
@@ -25,7 +25,7 @@ export const Services = () => {
             </div>
 
             {/* 2 */}
-            <div className="col-md-3 col-sm-6">
+            <div className="col-lg-3 col-md-6 col-sm-6">
               <div className="servicesContainer__rowBox">
               <div className="circleIconBg">
                   <FontAwesomeIcon className="circleIcon" icon={faFileCode} size="2x" />
@@ -37,8 +37,8 @@ export const Services = () => {
               </div>
             </div>
 
-            {/* 3 */}
-            <div className="col-md-3 col-sm-6">
+           {/* 3 */}
+            <div className="col-lg-3 col-md-6 col-sm-6">
               <div className="servicesContainer__rowBox">
               <div className="circleIconBg">
                   <FontAwesomeIcon className="circleIcon" icon={faFacebookF} size="2x" />
@@ -51,7 +51,7 @@ export const Services = () => {
             </div>
 
             {/* 4 */}
-            <div className="col-md-3 col-sm-6">
+            <div className="col-lg-3 col-md-6 col-sm-6">
               <div className="servicesContainer__rowBox">
               <div className="circleIconBg">
                   <FontAwesomeIcon className="circleIcon" icon={faGoogle} size="2x" />
