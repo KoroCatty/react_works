@@ -8,6 +8,8 @@ import { AboutMe } from "./components/AboutMe";
 import { ParticleBg } from "./components/ParticleBg";
 import { Services } from "./components/Services";
 import { Experience } from "./components/Experience";
+import { Portfolio } from "./components/portfolio";
+
 
 // "react-particles-js": "^3.6.0",
 
@@ -25,6 +27,7 @@ function App() {
       <AboutMe />
       <Services />
       <Experience />
+      <Portfolio />
     </>
 
 

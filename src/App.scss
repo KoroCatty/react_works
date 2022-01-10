@@ -317,3 +317,89 @@ nav ul li {
     width:100%;
   }
 }
+// Portfolio--------------------------
+.portfolio__wrapper {
+  background-color:var(--primary-light-grey);
+  padding: 3rem 0;
+}
+.portfolio__wrapper h1 {
+  color: orange;
+}
+.portfolio-image-box {
+  position:relative;
+  margin:1rem;
+  // text-align: center;
+ }
+.portfolio-image {
+  width:15rem;
+  border:1px solid var(orange);
+  padding: 0 0.5rem;
+}
+
+// Overflow Box--------------
+.overflow {
+  position: absolute;
+  top:0;
+  border: 1px solid red;
+  background-color: black;
+  opacity:0;
+  width: 15rem;
+  height:  8rem;
+  cursor: pointer;
+}
+.portfolio-image-box:hover .overflow{
+  opacity: 60%;
+  transition: all 0.3s ease-in-out ;
+}
+
+.portfolilo-icon {
+  position: absolute;
+  opacity:0;
+  margin-left: -8rem;
+  margin-top: 3.6rem;
+  color: var(--primary-orange);
+  font-size: 1.5rem;
+}
+.portfolio-image-box:hover .portfolilo-icon {
+  opacity: 0.9;
+  transition: all 0.3s ease-in-out ;
+  cursor: pointer;
+}
+// Pop up box ---------------
+.portfolio-image-popupbox {
+width: 45rem;
+padding: 0 0.5rem;
+}
+.hyper-link {
+  cursor: pointer;
+  color:orange;
+}
+.hyper-link:hover {
+  color:var(--primary-red);
+}
+// Media-------------
+// Pop-up時のサイズ
+@media(max-width:768px) {
+  .portfolio-image-popupbox{
+    width: 100%;
+  }
+}
+
+@media(max-height:570px) {
+  .portfolio-image-popupbox{
+    width: 80%;
+  }
+  .portfolio-image-popupbox{
+    width: 50%;
+  }
+}
+
+@media(max-height:280px) {
+  .portfolio-image-popupbox{
+    height:  90%;
+  }
+  .portfolio-image-popupbox{
+    width: 30%;
+  }
+}
+
