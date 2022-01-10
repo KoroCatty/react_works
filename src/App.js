@@ -9,6 +9,7 @@ import { ParticleBg } from "./components/ParticleBg";
 import { Services } from "./components/Services";
 import { Experience } from "./components/Experience";
 import { Portfolio } from "./components/portfolio";
+import { Testimonials} from "./components/Testimonials";
 
 
 // "react-particles-js": "^3.6.0",
@@ -28,6 +29,7 @@ function App() {
       <Services />
       <Experience />
       <Portfolio />
+      <Testimonials />
     </>
 
 

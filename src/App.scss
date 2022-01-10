@@ -9,6 +9,7 @@
   --primary-dark: rgba(255, 255, 255, 0);
   --primary-red: #ef4035;
   --primary-hover-red: #f33501;
+  --primary-transparent-black: rgba(0,0,0,0.7);
 }
 
 body {
@@ -402,4 +403,60 @@ padding: 0 0.5rem;
     width: 30%;
   }
 }
+// TestimonialsCarousel --------------
+.testimonials {
+  background-image: url("../src/testimonials-bg.jpg");
+  background-size:cover ;
+  // background-color:black;
+  text-align: center;
+  padding-bottom: 4rem;
+  margin-bottom: 0;
+  width:100%;
+}
+.testimonials h1 {
+  color:orange;
+  padding: 3rem 0;
+  text-transform: uppercase;
+}
+.testimonials-content {
+  text-align: center;
+  max-width: 53.125rem;
+  margin: 0 auto 2rem auto;
+  background-color: rgba(0,0,0,0.6);
+}
+.myCarousel {
+  color:white;
+  background:transparent;
+  margin-top:-6%;
+  width: 54%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 6%;
+  padding-bottom: 8%;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 17.8rem;
+}
+.myCarousel h3 {
+  color: orange;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.myCarousel p {
+  color: grey;
+}
 
+.carousel .slide img {
+  width: 10rem !important;
+  border-radius: 50%;;
+}
+.carousel .slide {
+  // background: transparent !important;
+  height: 100% !important;
+  padding-top: 2rem;
+}
+
+.carousel-root {
+  margin: auto !important;
+  margin-top: 3% !important;
+}
