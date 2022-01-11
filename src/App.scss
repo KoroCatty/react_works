@@ -460,3 +460,98 @@ padding: 0 0.5rem;
   margin: auto !important;
   margin-top: 3% !important;
 }
+
+// Contacts --------------------
+.contacts {
+  background:black;
+  padding: 3rem 0;
+}
+
+.contacts h1 {
+  color: orange;
+  padding: 1.3rem 0;
+  text-transform: uppercase;
+}
+.contacts p {
+  color:grey;
+  font-size:1.2rem;
+}
+// INPUTS -------------------------
+.contacts input, .contacts textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: none;
+  resize: none;//resize は CSS のプロパティで、要素の寸法を変更できるかどうか、もしそうなら、どの方向に変更できるかを設定します
+  border: 0;
+  border-bottom: 0.124rem solid darkgrey;
+  border-radius: 0;
+  color: var(grey);
+  outline: 0 !important;//borderでは表現できないこともoutlineなら表現できます。outlineは要素の輪郭線の太さ・色・スタイルを指定できるプロパティです。borderとほとんど一緒です
+  box-shadow:none;
+  top:0;
+  margin-bottom: 1rem;
+  padding-left: 0;
+}
+
+.contacts input:focus, .contacts textarea:focus {
+  background: transparent;
+  color: orange;
+  border-bottom: 0.124rem solid darkgrey;
+}
+.contacts textarea {
+  height: 12.2rem;
+  // margin: 2rem;
+}
+.contact-btn {
+  margin: 1rem 0 0 0;
+  padding:1vw 0;
+  width: 100%;
+  background: none;
+  color:white;
+}
+.contact-btn:hover {
+  background-color: orange;
+  transition: all 0.2s ease-in-out;
+}
+.line {
+  position: relative;
+  top:-2rem;
+  width: 0;
+  height: 0.125rem;
+  background: orange;
+  display: inline-block;
+}
+
+//隣接兄弟セレクター。内側ではない最初のpを指定
+// inputにfocusしたら表示される
+input:focus+.line, textarea:focus+.line {
+  width: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+.form-control {
+  margin: -0.3rem 0;
+}
+
+// Media ---------------------------
+@media(max-width: 768px) {
+  .contacts {
+    overflow-x:hidden;//Remove a horizontal scroll bar
+  }
+}
+@media(max-width: 768px) {
+  .contacts .container {
+    padding: 0 1rem;
+  }
+}
+@media(max-width: 768px) {
+  .contacts p {
+    padding: 0 0.4rem;
+  }
+}
+
+
+
+
+
+

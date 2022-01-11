@@ -10,6 +10,7 @@ import { Services } from "./components/Services";
 import { Experience } from "./components/Experience";
 import { Portfolio } from "./components/portfolio";
 import { Testimonials} from "./components/Testimonials";
+import { Contacts } from "./components/Contacts";
 
 
 // "react-particles-js": "^3.6.0",
@@ -30,6 +31,7 @@ function App() {
       <Experience />
       <Portfolio />
       <Testimonials />
+      <Contacts />
     </>
 
 
