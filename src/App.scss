@@ -533,6 +533,11 @@ input:focus+.line, textarea:focus+.line {
   margin: -0.3rem 0;
 }
 
+.success-message {
+  color:orange;
+  font-size: 3vw;
+}
+
 // Media ---------------------------
 @media(max-width: 768px) {
   .contacts {

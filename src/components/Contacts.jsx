@@ -1,29 +1,29 @@
-import React, { useRef } from 'react';
-// import React, { useRef, useState } from 'react';
+// import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import {useForm} from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 export const Contacts = () => {
-  // Fook
-  // const[successMessage, setSuccessMessage] = useState("");
-// Form Validation
-const { register, handleSubmit, errors } = useForm();
+  // hook
+  const[successMessage, setSuccessMessage] = useState("");
+  // Form Validation
+  const { register, handleSubmit, errors } = useForm();
 
-const onSubmit = (data, r) => {
-  sendEmail(
-    serviceID,
-    templateID,
-    {
-      name: data.name,
-      phone: data.phone,
-      email: data.email,
-      subject: data.subject,
-      description: data.description
-    },
-    userID
-  )
-  r.target.reset();//
-}
+  const onSubmit = (data, r) => {
+    sendEmail(
+      serviceID,
+      templateID,
+      {
+        name: data.name,
+        phone: data.phone,
+        email: data.email,
+        subject: data.subject,
+        description: data.description
+      },
+      userID
+    )
+    r.target.reset();//
+  }
 
   // These codes are from the emailjs website
   const form = useRef();
@@ -33,49 +33,49 @@ const onSubmit = (data, r) => {
   const userID = "user_wA38mxRtUjkOAGwKXSbbn";//my ID from the website
 
   const sendEmail = (e) => {
-  // const sendEmail = (serviceID, templateID, form.current, user_wA38mxRtUjkOAGwKXSbbn) => {
+    // const sendEmail = (serviceID, templateID, form.current, user_wA38mxRtUjkOAGwKXSbbn) => {
     e.preventDefault();
 
     emailjs.sendForm('serviceID', 'templateID', form.current, 'user_wA38mxRtUjkOAGwKXSbbn')
-    // emailjs.send('serviceID', 'templateID', form.current, 'user_wA38mxRtUjkOAGwKXSbbn')
+      // emailjs.send('serviceID', 'templateID', form.current, 'user_wA38mxRtUjkOAGwKXSbbn')
       .then((result) => {
-      // .then(() => {
+        // .then(() => {
         console.log(result.text);
-        // setSuccessMessage("Form sent successfully!I'll contact you ASAP");
+        {/*send successful message */}
+        setSuccessMessage("Form sent successfully!I'll contact you ASAP");
       }
-      , (error) => {
-        console.log(error.text);
-      // 
-    }).catch(err => console.error(`Something went wrong${err}`));
+        , (error) => {
+          console.log(error.text);
+          // 
+        }).catch(err => console.error(`Something went wrong ${err}`));
   };
-
-
-
-
-
 
   return (
     <div className="contacts">
       <div className="text-center">
         <h1>contact me</h1>
         <p>Please fill out the form and describe your project needs and I'll contact you as soon as possible.</p>
+    {/* To show the successful message */}
+        <span className='success-message'>{successMessage}</span>
       </div>
 
       <div className="container">
 
         <form ref={form} onSubmit={sendEmail}>
-        {/* <form ref={form} onSubmit={handleSubmit(onSubmit)}> */}
+          {/* <form ref={form} onSubmit={handleSubmit(onSubmit)}> */}
           <div className="row">
             <div className="col-md-6 col-xs-12">
+
+
               {/* NAME INPUT */}
-              <div className="text-center"></div> {/* これによりinputにhover時真ん中から黄色の線が流れるようになる */}
+              <div className="text-center"> {/* これによりinputにhover時真ん中から黄色の線が流れるようになる */}
+                <input
+                  type="text"
+                  className='form-control'
+                  placeholder="Name"
+                  name="name"
 
-              <input
-                type="text"
-                className='form-control'
-                placeholder="Name"
-                name="name"
-
+                  register={register} required
 
                 // ref={
                 //   register({
@@ -86,17 +86,18 @@ const onSubmit = (data, r) => {
                 //     }
                 //   })
                 // }
-              />
-              <div className="line"></div>
+                />
+                <div className="line"></div>
+              </div>
               {/* <span className="error-message"></span>
                 {errors.name && errors.name.message } */}
 
               {/* PHONE INPUT */}
               <div className="text-center">
                 <input
-                  type="number"
+                  type="tel"
                   className='form-control'
-                  placeholder="Phone Number"
+                  placeholder="Phone Number (optional)"
                   name="phone"
                 />
                 <div className="line"></div>
@@ -108,6 +109,8 @@ const onSubmit = (data, r) => {
                   className='form-control'
                   placeholder="Email"
                   name="email"
+
+                  register={register} required
                 />
                 <div className="line"></div>
               </div>
@@ -116,7 +119,7 @@ const onSubmit = (data, r) => {
                 <input
                   type="text"
                   className='form-control'
-                  placeholder="Subject"
+                  placeholder="Subject (optional)"
                   name="subject"
                 />
                 <div className="line"></div>
@@ -148,3 +151,6 @@ const onSubmit = (data, r) => {
 }
 
 // export default contacts
+
+
+
