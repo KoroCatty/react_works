@@ -1,26 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
 
 :root {
   --primary-white: #fff;
+  --primary-light-grey: #f4f4f4;
+  --primary-grey: #ccd1d9;
+  --primary-dark-grey: #666666;
   --primary-orange: #f9ab00;
   --primary-dark: rgba(255, 255, 255, 0);
+  --primary-red: #ef4035;
+  --primary-hover-red: #f33501;
+  --primary-transparent-black: rgba(0,0,0,0.7);
 }
 
 body {
-  font-family: 'Roboto Condensed', sans-serif;
-  background-color: lightgreen;
+  font-family: "Roboto Condensed", sans-serif;
+  // background-color: lightgreen;
 }
 
-
 // Navbar-----------------------------
+nav {
+  z-index: 2;
+}
 // pxに rem converter (NinjaUnits) 使用
 .headerLogo {
-  width:16.25rem;
+  width: 16.25rem;
 }
 // Menu Links -----------------
 nav a.nav-link {
-  letter-spacing:0.0375rem;
-  cursor:pointer;
+  letter-spacing: 0.0375rem;
+  cursor: pointer;
 }
 
 nav ul li {
@@ -29,20 +37,558 @@ nav ul li {
 
 // 定義したものを呼び出し、bootstrapのルールを上書きするための !important
 .navbar-nav > li > a {
-  color: var(--primary-white)!important ;
-  margin-right:0.75rem;
-  margin-left:0.75rem;
+  color: var(--primary-white) !important ;
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
 
-  border-top: 2px solid var(--primary-dark);//To prevent move when hovered
+  border-top: 2px solid var(--primary-dark); //To prevent move when hovered
 }
 
 .navbar-brand {
-  max-width:117.25rem;
-  padding:0 !important;
-  height:6rem !important;
+  max-width: 117.25rem;
+  padding: 0 !important;
+  height: 6rem !important;
+}
+@media (max-width: 768px) {
+  .navbar-brand {
+    width: 20vw;
+  }
+}
+// 押したボタンの上に表示させる
+.navbar-nav > li > a.active, .navbar-nav > li >a:focus {
+  border-top: 0.2rem solid var(--primary-orange);
 }
 
-.navbar-nav li a:hover{
-border-top: 2px solid var(--primary-orange);
-
+.navbar-nav li a:hover {
+  border-top: 2px solid var(--primary-orange);
 }
+
+// HEADER----------------------------------
+.header-wrapper {
+  position: relative;
+  background: url("../src/wall-and-laptop-background.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  // z-index: 0;
+}
+
+.main-info {
+  // place center both vertically and horizontally
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.main-infoText {
+  color: var(--primary-white);
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .main-infoText {
+    font-size: 5vw;
+  }
+}
+
+// Typed Text (animation effect)----------------------
+.typed-text {
+  font-size: 2rem;
+  color: var(--primary-white);
+}
+
+@media (max-width: 768px) {
+  .typed-text {
+    font-size: 4vw;
+  }
+}
+
+// Header Main Offer Button------------
+.btnMain__offer {
+  border: 1px solid var(--primary-red);
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0;
+  // padding: 8px 12px;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  color: var(--primary-white);
+  margin-top: 2rem;
+}
+.btnMain__offer:hover {
+  background-color: var(--primary-red);
+  color: var(--primary-white);
+  transition: all 0.3s ease-in-out;
+}
+
+//Particle JS------------------------
+.particles__canvas {
+  position: absolute;
+  height: 100vh;
+  width: 95vw;
+  z-index: 1;
+
+  // overflow-y:hidden;
+}
+// .tsparticles-canvas-el {
+//   position:absolute;
+//   height:100vh;
+//   width: 95vw;
+//   z-index:1;
+// }
+
+@media (max-width: 768px) {
+  .particles__canvas {
+    display: none;
+  }
+}
+
+// About Me-------------
+// .container {
+//   z-index:22;
+// }
+.photo__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mePhoto {
+  width: 20vw;
+  height: 25vh;
+  border-radius: 50%;
+  padding: 0.1vw;
+  border: 1px solid var(--primary-orange);
+}
+@media (max-width: 468px) {
+  .mePhoto {
+    width: 30vw;
+    height: 15vh;
+  }
+}
+
+.author__heading {
+  color: var(--primary-orange);
+  text-transform: uppercase;
+}
+
+// Services -------------------------
+.services {
+  width: 95vw;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 2rem;
+  background-color: var(--primary-light-grey);
+  &__title {
+    // color: var(--primary-dark);
+    text-transform: uppercase;
+  }
+}
+
+.circleIconBg {
+  position: relative;
+  margin: 0.375rem auto; //真ん中寄せ
+  background-color: var(--primary-orange);
+  border-radius: 50%;
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+.circleIcon {
+  font-size: 1.4rem;
+  color: var(--primary-white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.servicesContainer__rowBox {
+  height: 16rem;
+  border-bottom: 0.3125rem solid orange;
+  padding: 0.625rem;
+  margin-bottom: 1.875rem;
+  // background-color: lightgreen;
+}
+.servicesContainer__rowBox:hover {
+  background: var(--primary-orange);
+  border-bottom: 0.3125rem solid var(--primary-dark);
+  transition: all 0.3s ease-in-out;
+}
+
+.servicesContainer__rowBox:hover .circleIconBg {
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+.servicesContainer__rowBox:hover .circleIcon {
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+.servicesContainer__rowBox:hover .servicesContainer__rowBox--title {
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.servicesContainer__rowBox:hover .servicesContainer__rowBox--text {
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+// Experience----------------
+.experience {
+  padding: 0.7rem;
+}
+.experience__wrapper {
+  position: relative;
+  padding: 3.125rem 0;
+  overflow: hidden;
+}
+
+.experienceContainer__heading {
+  text-transform: uppercase;
+  color: var(--primary-orange);
+}
+//線引きする
+.experience__wrapper::before {
+  background-color: grey;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 50%;
+  margin-left: -0.0625rem;
+  width: 0.125rem;
+  height: 100%;
+  z-index: 1;
+}
+
+.timeline-block {
+  width: calc(50% + 0.5rem);
+  display: flex;
+  justify-content: space-between;
+  clear: both; //clearプロパティは、floatの回り込みを解除するプロパティです。 clearプロパティは、float指定した要素の次の要素に指定します。 float要素が連続している場合、一番最後のfloat要素の次の要素に指定します。
+}
+.timeline-block-right {
+  float: right;
+  // transform: translateX(-2.5%);
+}
+.timeline-block-left {
+  float: left;
+  direction: rtl; //right to left
+}
+.marker {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0.3123rem solid grey;
+  background-color: orange;
+  margin-top: 0.625rem;
+  z-index: 3;
+}
+
+.timelineContent {
+  width: 95%;
+  padding: 0 1rem;
+  color: var(--primary-dark-grey);
+  direction: ltr;
+  &__heading {
+    color: red;
+  }
+  // &__text {
+  //   direction:ltr;
+  // }
+}
+
+// Media---------------
+@media (max-width: 768px) {
+  .experience__wrapper .container{
+    padding-left:0;
+  }
+  .experience__wrapper::before {
+    left: 0.5rem;
+    margin-bottom: 1.875rem;
+  }
+  .timeline-block-right {
+    float: none;
+    width:100%;
+  }
+  .timeline-block-left {
+    float: none;
+    direction:ltr;
+    width:100%;
+  }
+}
+// Portfolio--------------------------
+.portfolio__wrapper {
+  background-color:var(--primary-light-grey);
+  padding: 3rem 0;
+}
+.portfolio__wrapper h1 {
+  color: orange;
+}
+.portfolio-image-box {
+  position:relative;
+  margin:1rem;
+  // text-align: center;
+ }
+.portfolio-image {
+  width:15rem;
+  border:1px solid var(orange);
+  padding: 0 0.5rem;
+}
+
+// Overflow Box--------------
+.overflow {
+  position: absolute;
+  top:0;
+  border: 1px solid red;
+  background-color: black;
+  opacity:0;
+  width: 15rem;
+  height:  8rem;
+  cursor: pointer;
+}
+.portfolio-image-box:hover .overflow{
+  opacity: 60%;
+  transition: all 0.3s ease-in-out ;
+}
+
+.portfolilo-icon {
+  position: absolute;
+  opacity:0;
+  margin-left: -8rem;
+  margin-top: 3.6rem;
+  color: var(--primary-orange);
+  font-size: 1.5rem;
+}
+.portfolio-image-box:hover .portfolilo-icon {
+  opacity: 0.9;
+  transition: all 0.3s ease-in-out ;
+  cursor: pointer;
+}
+// Pop up box ---------------
+// ポップアップ時の箱(自動生成クラス)
+.popupbox-wrapper {
+  // background-color: red!important;
+  height: 65vh;
+}
+.portfolio-image-popupbox {
+width: 25rem;
+padding: 0 0.5rem;
+height:30vh;
+// background-color: red;
+}
+.hyper-link {
+  cursor: pointer;
+  color:orange;
+}
+.hyper-link:hover {
+  color:var(--primary-red);
+}
+// Media-------------
+// Pop-up時のサイズ
+@media(max-width:768px) {
+  .portfolio-image-popupbox{
+    width: 100%;
+  }
+}
+
+@media(max-height:570px) {
+  .portfolio-image-popupbox{
+    width: 80%;
+  }
+  .portfolio-image-popupbox{
+    width: 50%;
+  }
+}
+
+@media(max-height:280px) {
+  .portfolio-image-popupbox{
+    height:  90%;
+  }
+  .portfolio-image-popupbox{
+    width: 30%;
+  }
+}
+// TestimonialsCarousel --------------
+.testimonials {
+  background-image: url("../src/testimonials-bg.jpg");
+  background-size:cover ;
+  // background-color:black;
+  text-align: center;
+  padding-bottom: 4rem;
+  margin-bottom: 0;
+  width:100%;
+}
+.testimonials h1 {
+  color:orange;
+  padding: 3rem 0;
+  text-transform: uppercase;
+}
+.testimonials-content {
+  text-align: center;
+  max-width: 53.125rem;
+  margin: 0 auto 2rem auto;
+  background-color: rgba(0,0,0,0.6);
+}
+.myCarousel {
+  color:white;
+  background:transparent;
+  margin-top:-6%;
+  width: 54%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 6%;
+  padding-bottom: 8%;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 17.8rem;
+}
+.myCarousel h3 {
+  color: orange;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.myCarousel p {
+  color: grey;
+}
+
+.carousel .slide img {
+  width: 10rem !important;
+  border-radius: 50%;;
+}
+.carousel .slide {
+  // background: transparent !important;
+  height: 100% !important;
+  padding-top: 2rem;
+}
+
+.carousel-root {
+  margin: auto !important;
+  margin-top: 3% !important;
+}
+
+// Contacts --------------------
+.contacts {
+  background:black;
+  padding: 3rem 0;
+}
+
+.contacts h1 {
+  color: orange;
+  padding: 1.3rem 0;
+  text-transform: uppercase;
+}
+.contacts p {
+  color:grey;
+  font-size:1.2rem;
+  margin-bottom: 4vw;
+}
+
+// INPUTS -------------------------
+form{
+  margin-top:3vw !important;
+}
+.contacts input, .contacts textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: none;
+  resize: none;//resize は CSS のプロパティで、要素の寸法を変更できるかどうか、もしそうなら、どの方向に変更できるかを設定します
+  border: 0;
+  border-bottom: 0.124rem solid darkgrey;
+  border-radius: 0;
+  color: var(grey);
+  outline: 0 !important;//borderでは表現できないこともoutlineなら表現できます。outlineは要素の輪郭線の太さ・色・スタイルを指定できるプロパティです。borderとほとんど一緒です
+  box-shadow:none;
+  top:0;
+  margin-bottom: 1rem;
+  padding-left: 0;
+}
+
+.contacts input:focus, .contacts textarea:focus {
+  background: transparent;
+  color: orange;
+  border-bottom: 0.124rem solid darkgrey;
+}
+.contacts textarea {
+  height: 12.2rem;
+  // margin: 2rem;
+}
+.contact-btn {
+  margin: 1rem 0 0 0;
+  padding:1vw 0;
+  width: 100%;
+  background: none;
+  color:white;
+}
+.contact-btn:hover {
+  background-color: orange;
+  transition: all 0.2s ease-in-out;
+}
+.line {
+  position: relative;
+  top:-2rem;
+  width: 0;
+  height: 0.125rem;
+  background: orange;
+  display: inline-block;
+}
+
+//隣接兄弟セレクター。内側ではない最初のpを指定
+// inputにfocusしたら表示される
+input:focus+.line, textarea:focus+.line {
+  width: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+.form-control {
+  margin: -0.3rem 0;
+}
+
+.success-message {
+  color:orange;
+  font-size: 3vw;
+  line-height: 6vw;
+}
+
+// Media ---------------------------
+@media(max-width: 768px) {
+  .contacts {
+    overflow-x:hidden;//Remove a horizontal scroll bar
+  }
+}
+@media(max-width: 768px) {
+  .contacts .container {
+    padding: 0 1rem;
+  }
+}
+@media(max-width: 768px) {
+  .contacts p {
+    padding: 0 0.4rem;
+  }
+}
+
+// Footer ----------------------
+.footer {
+  background:lightgreen;
+  color:black;
+  padding: 3rem;
+}
+.footer a {
+  text-decoration: none;
+  color:grey;
+}
+.footer a:hover {
+  text-decoration: none;
+  color:orange;
+  cursor: pointer;
+}
+
+.footer p {
+  margin-bottom: 0;
+}
+

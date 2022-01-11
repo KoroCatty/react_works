@@ -1,13 +1,14 @@
 import React from 'react';
 import logo from "../logo.png";
+import {Link} from "react-scroll";
 
-// REACT FONT AWESOME IMPORTS ()
+// REACT FONT AWESOME IMPORTS
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
       <div className="container">
 
         <a className="navbar-brand" href="#">
@@ -24,26 +25,26 @@ const Navbar = () => {
 
           <ul className="navbar-nav m-auto">
             <li className="nav-item active">
-              <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+              <Link smooth={true} to="home" duration={600} offset={-110} className="nav-link" href="#">Home <span className="sr-only">(current)</span></Link>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="#">About</a>
+              <Link smooth={true} to="about" duration={600} offset={-110} className="nav-link" href="#">About</Link>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="#">Services</a>
+              <Link smooth={true} to="services" duration={600} offset={-110} className="nav-link" href="#">Services</Link>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="#">How work</a>
+              <Link smooth={true} to="experience" duration={600} offset={-110} className="nav-link" href="#">Experience</Link >
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="#">Portfolio</a>
+              <Link smooth={true} to="portfolio" duration={600} offset={-110} className="nav-link" href="#">Portfolio</Link >
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Contacts</a>
+              <Link smooth={true} to="contacts" duration={600} offset={-110} className="nav-link" href="#">Contacts</Link >
             </li>
 
 
