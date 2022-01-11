@@ -5,7 +5,7 @@ import Typed from "react-typed";// Library
 
 export const Header = () => {
   return (
-      <div className="header-wrapper">
+      <div id="home" className="header-wrapper">
              {/* <ParticleBg /> */}
         <div className="main-info">
           <h1 className="main-infoText">web development and websites promotions</h1>

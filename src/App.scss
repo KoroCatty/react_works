@@ -54,6 +54,10 @@ nav ul li {
     width: 20vw;
   }
 }
+// 押したボタンの上に表示させる
+.navbar-nav > li > a.active, .navbar-nav > li >a:focus {
+  border-top: 0.2rem solid var(--primary-orange);
+}
 
 .navbar-nav li a:hover {
   border-top: 2px solid var(--primary-orange);
@@ -65,7 +69,7 @@ nav ul li {
   background: url("../src/wall-and-laptop-background.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 100vh;
   // z-index: 0;
 }
 
@@ -367,9 +371,16 @@ nav ul li {
   cursor: pointer;
 }
 // Pop up box ---------------
+// ポップアップ時の箱(自動生成クラス)
+.popupbox-wrapper {
+  // background-color: red!important;
+  height: 65vh;
+}
 .portfolio-image-popupbox {
-width: 45rem;
+width: 25rem;
 padding: 0 0.5rem;
+height:30vh;
+// background-color: red;
 }
 .hyper-link {
   cursor: pointer;
@@ -475,8 +486,13 @@ padding: 0 0.5rem;
 .contacts p {
   color:grey;
   font-size:1.2rem;
+  margin-bottom: 4vw;
 }
+
 // INPUTS -------------------------
+form{
+  margin-top:3vw !important;
+}
 .contacts input, .contacts textarea {
   width: 100%;
   box-sizing: border-box;
@@ -536,6 +552,7 @@ input:focus+.line, textarea:focus+.line {
 .success-message {
   color:orange;
   font-size: 3vw;
+  line-height: 6vw;
 }
 
 // Media ---------------------------
@@ -555,8 +572,23 @@ input:focus+.line, textarea:focus+.line {
   }
 }
 
+// Footer ----------------------
+.footer {
+  background:lightgreen;
+  color:black;
+  padding: 3rem;
+}
+.footer a {
+  text-decoration: none;
+  color:grey;
+}
+.footer a:hover {
+  text-decoration: none;
+  color:orange;
+  cursor: pointer;
+}
 
-
-
-
+.footer p {
+  margin-bottom: 0;
+}
 

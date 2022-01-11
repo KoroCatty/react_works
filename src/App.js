@@ -11,6 +11,7 @@ import { Experience } from "./components/Experience";
 import { Portfolio } from "./components/portfolio";
 import { Testimonials} from "./components/Testimonials";
 import { Contacts } from "./components/Contacts";
+import { Footer } from "./components/Footer";
 
 
 // "react-particles-js": "^3.6.0",
@@ -32,6 +33,7 @@ function App() {
       <Portfolio />
       <Testimonials />
       <Contacts />
+      <Footer />
     </>
 
 

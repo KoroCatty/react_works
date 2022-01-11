@@ -1,11 +1,13 @@
-// import React, { useRef } from 'react';
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useForm } from "react-hook-form";
 
+
 export const Contacts = () => {
   // hook
   const[successMessage, setSuccessMessage] = useState("");
+
+  // const[inputContnet], [setInputContnet] = useState("");
   // Form Validation
   const { register, handleSubmit, errors } = useForm();
 
@@ -50,16 +52,19 @@ export const Contacts = () => {
         }).catch(err => console.error(`Something went wrong ${err}`));
   };
 
+//button内と連動。ここで定義しておく。
+  const [value, setValue] = useState('');
+
   return (
-    <div className="contacts">
+    <div id="contacts" className="contacts">
       <div className="text-center">
         <h1>contact me</h1>
-        <p>Please fill out the form and describe your project needs and I'll contact you as soon as possible.</p>
+        <p >Please fill out the form and describe your project needs and I'll contact you as soon as possible.</p>
     {/* To show the successful message */}
         <span className='success-message'>{successMessage}</span>
       </div>
 
-      <div className="container">
+      <div className="container .contactForms">
 
         <form ref={form} onSubmit={sendEmail}>
           {/* <form ref={form} onSubmit={handleSubmit(onSubmit)}> */}
@@ -76,6 +81,9 @@ export const Contacts = () => {
                   name="name"
 
                   register={register} required
+                  // 送信時に空にするためvalueを入れる
+                  // value={successMessage}
+                  // onChange={e => setValue(e.target.value)}
 
                 // ref={
                 //   register({
@@ -138,7 +146,11 @@ export const Contacts = () => {
                 ></textarea>
                 <div className="line"></div>
               </div>
-              <button className="btn-main-offer contact-btn" type="submit">contact me</button>
+              <button className="btn-main-offer contact-btn" type="submit" 
+              // ボタンが押されたらinput内を空にする
+                // onClick={value}
+                // onClick={() => setValue('')}
+              >contact me</button>
             </div>
 
 

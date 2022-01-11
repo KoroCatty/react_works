@@ -168,7 +168,7 @@ export const Portfolio = () => {
 
 
   return (
-    <div className="portfolio__wrapper">
+    <div id="portfolio" className="portfolio__wrapper">
       <div className="container ">
         <h1 className="text-uppercase text-center py-5">portfolio</h1>
 

@@ -18,6 +18,8 @@
     "react-popupbox": "^2.0.8",
     "react-responsive-carousel": "^3.2.22",
     "react-scripts": "5.0.0",
+    "react-scroll": "^1.8.4",
+    "react-share": "^4.4.0",
     "react-tsparticles": "^1.39.0",
     "react-typed": "^1.2.0",
     "reactjs-popup": "^2.0.5",
