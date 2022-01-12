@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/react_works/static/css/main.6b6535b0.css",
-    "main.js": "/react_works/static/js/main.4d6efffa.js",
+    "main.css": "/react_works/static/css/main.fc3237fe.css",
+    "main.js": "/react_works/static/js/main.a0fb09a0.js",
     "static/js/787.12a8bc9c.chunk.js": "/react_works/static/js/787.12a8bc9c.chunk.js",
     "static/media/netflix.png": "/react_works/static/media/netflix.5a78c4b980990001021b.png",
     "static/media/city-guide-app.png": "/react_works/static/media/city-guide-app.e4843bd01dc4d1634538.png",
     "static/media/portfolio.png": "/react_works/static/media/portfolio.e4d369bc88d9501b6330.png",
+    "static/media/kojima.png": "/react_works/static/media/kojima.55aba191a37fcafe088f.png",
     "static/media/testimonials-bg.jpg": "/react_works/static/media/testimonials-bg.75612be74ca26cb2eee2.jpg",
-    "static/media/task-manager.png": "/react_works/static/media/task-manager.7cdcc29ec2944720c44f.png",
     "static/media/me.jpg": "/react_works/static/media/me.7f639d747253585033d7.jpg",
     "static/media/wall-and-laptop-background.jpg": "/react_works/static/media/wall-and-laptop-background.f9e274f49e7f72950a2f.jpg",
+    "static/media/k_logo.png": "/react_works/static/media/k_logo.7c1bb73ca622eb1fdb7a.png",
     "static/media/avatar-4.png": "/react_works/static/media/avatar-4.f7fb7ed7493d87bbba75.png",
     "static/media/avatar-3.png": "/react_works/static/media/avatar-3.d6c9b46f1e2a3bbfbefa.png",
     "static/media/avatar-1.png": "/react_works/static/media/avatar-1.9277ecea7570a7cb523d.png",
     "static/media/avatar-2.png": "/react_works/static/media/avatar-2.75d8f23ea5e97b4d897d.png",
     "index.html": "/react_works/index.html",
-    "main.6b6535b0.css.map": "/react_works/static/css/main.6b6535b0.css.map",
-    "main.4d6efffa.js.map": "/react_works/static/js/main.4d6efffa.js.map",
+    "main.fc3237fe.css.map": "/react_works/static/css/main.fc3237fe.css.map",
+    "main.a0fb09a0.js.map": "/react_works/static/js/main.a0fb09a0.js.map",
     "787.12a8bc9c.chunk.js.map": "/react_works/static/js/787.12a8bc9c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b6535b0.css",
-    "static/js/main.4d6efffa.js"
+    "static/css/main.fc3237fe.css",
+    "static/js/main.a0fb09a0.js"
   ]
 }
