@@ -1,4 +1,4 @@
-// ブートストラップを輸入
+// Bootstrap 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.scss";
 // import Particles from "react-tsparticles";
@@ -13,7 +13,6 @@ import { Testimonials } from "./components/Testimonials";
 import { Contacts } from "./components/Contacts";
 import { Footer } from "./components/Footer";
 
-// "react-particles-js": "^3.6.0",
 
 // if you put it in a seperate component and import the component into different routes than you will have them in different areas. You can also disable full screen for the particles so it isn't covering the entire screen by Youtube
 

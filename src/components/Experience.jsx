@@ -7,9 +7,11 @@ export const Experience = () => {
         <h1 className="experienceContainer__heading">experience</h1>
       </div>
 
-      <div className="container experience__wrapper">
+      <div className="container experienceWrapper">
+
         {/* 1 */}
         <div className="timeline-block timeline-block-right">
+          
           <div className="marker"></div>
           <div className="timelineContent">
             <h2 className='timelineContent__heading'>2014-2015</h2>

@@ -11,21 +11,23 @@
   --primary-hover-red: #f33501;
   --primary-transparent-black: rgba(0, 0, 0, 0.7);
 }
+// html {
+//   font-size: 16px;
+// }
 
 body {
   font-family: "Roboto Condensed", sans-serif;
-  // background-color: lightgreen;
 }
 
 // Navbar-----------------------------
 nav {
   z-index: 2;
+  // height: 100px;
 }
-// pxに rem converter (NinjaUnits) 使用
-.headerLogo {
-  width: 16.25rem;
-}
+
+
 // Menu Links -----------------
+// pxに rem converter (NinjaUnits) 使用
 nav a.nav-link {
   letter-spacing: 0.0375rem;
   cursor: pointer;
@@ -40,24 +42,29 @@ nav ul li {
   color: var(--primary-white) !important ;
   margin-right: 0.75rem;
   margin-left: 0.75rem;
-
-  border-top: 2px solid var(--primary-dark); //To prevent move when hovered
+  //To prevent move when hovered
+  border-top: 2px solid var(--primary-dark); 
 }
 
-.navbar-brand {
-  max-width: 117.25rem;
-  padding: 0 !important;
+.navbarBrand {
   height: 6rem !important;
 }
-@media (max-width: 768px) {
-  .navbar-brand {
-    width: 20vw;
+
+.navbarBrand__logo {
+  width: 8rem;
+  margin-top: 1rem;
+  // width: 10vw;
+}
+@media (max-width: 280px) {
+  .navbarBrand__logo {
+    width: 40vw;
   }
 }
+
 // 押したボタンの上に表示させる
 .navbar-nav > li > a.active,
 .navbar-nav > li > a:focus {
-  border-top: 0.2rem solid var(--primary-orange);
+  border-top: 2px solid var(--primary-orange);
 }
 
 .navbar-nav li a:hover {
@@ -65,17 +72,16 @@ nav ul li {
 }
 
 // HEADER----------------------------------
-.header-wrapper {
+.headerWrapper {
   position: relative;
   background: url("../src/wall-and-laptop-background.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
-  // z-index: 0;
 }
 
-.main-info {
-  // place center both vertically and horizontally
+.headerInfo {
+  // 中央縦横揃え
   position: absolute;
   top: 0;
   left: 0;
@@ -90,20 +96,21 @@ nav ul li {
   z-index: 1;
 }
 
-.main-infoText {
-  color: var(--primary-white);
+.headerInfoText {
+  color: white;
   text-transform: uppercase;
 }
 @media (max-width: 768px) {
-  .main-infoText {
+  .headerInfoText {
     font-size: 5vw;
   }
 }
 
-// Typed Text (animation effect)----------------------
+// Typed Text (animation effect)
 .typed-text {
   font-size: 2rem;
-  color: var(--primary-white);
+  // font-size:28px;
+  color: white;
 }
 
 @media (max-width: 768px) {
@@ -113,19 +120,19 @@ nav ul li {
 }
 
 // Header Main Offer Button------------
-.btnMain__offer {
+.headerBtn {
   border: 1px solid var(--primary-red);
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 0;
-  // padding: 8px 12px;
-  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
-  color: var(--primary-white);
+  padding: 8px 12px;
+  // padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  color: white;
   margin-top: 2rem;
 }
-.btnMain__offer:hover {
+.headerBtn:hover {
   background-color: var(--primary-red);
-  color: var(--primary-white);
+  color:white;
   transition: all 0.3s ease-in-out;
 }
 
@@ -152,31 +159,34 @@ nav ul li {
 }
 
 // About Me-------------
-// .container {
-//   z-index:22;
-// }
-.photo__wrap {
+.aboutPhoto {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.mePhoto {
-  width: 20vw;
-  height: 25vh;
+&__me {
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   padding: 0.1vw;
   border: 1px solid var(--primary-orange);
-}
-@media (max-width: 468px) {
-  .mePhoto {
-    width: 30vw;
-    height: 15vh;
+  @media (max-width: 768px) {
+      width: 140px;
+      height: 140px;
+    }
+  @media (max-width: 468px) {
+      width: 120px;
+      height: 120px;
+    }
   }
 }
 
-.author__heading {
+
+.aboutHeading {
   color: var(--primary-orange);
   text-transform: uppercase;
+  // &__text {
+
+  // }
 }
 
 // Services -------------------------
@@ -185,10 +195,12 @@ nav ul li {
   margin: auto;
   text-align: center;
   padding-bottom: 2rem;
+  padding-top:1rem;
   background-color: var(--primary-light-grey);
   &__title {
-    // color: var(--primary-dark);
+    color: var(--primary-orange);
     text-transform: uppercase;
+    font-size: 2.5rem;
   }
 }
 
@@ -215,26 +227,29 @@ nav ul li {
   border-bottom: 0.3125rem solid orange;
   padding: 0.625rem;
   margin-bottom: 1.875rem;
-  // background-color: lightgreen;
 }
+// box内背景をオレンジ
 .servicesContainer__rowBox:hover {
   background: var(--primary-orange);
   border-bottom: 0.3125rem solid var(--primary-dark);
   transition: all 0.3s ease-in-out;
 }
-
+// アイコン背景を白
 .servicesContainer__rowBox:hover .circleIconBg {
   background-color: white;
   transition: all 0.3s ease-in-out;
 }
+// アイコンを黒
 .servicesContainer__rowBox:hover .circleIcon {
   color: black;
   transition: all 0.3s ease-in-out;
 }
+// タイトルを白
 .servicesContainer__rowBox:hover .servicesContainer__rowBox--title {
   color: white;
   transition: all 0.3s ease-in-out;
 }
+// テキストを白
 .servicesContainer__rowBox:hover .servicesContainer__rowBox--text {
   color: white;
   transition: all 0.3s ease-in-out;
@@ -244,7 +259,7 @@ nav ul li {
 .experience {
   padding: 0.7rem;
 }
-.experience__wrapper {
+.experienceWrapper {
   position: relative;
   padding: 3.125rem 0;
   overflow: hidden;
@@ -255,16 +270,17 @@ nav ul li {
   color: var(--primary-orange);
 }
 //線引きする
-.experience__wrapper::before {
-  background-color: grey;
+.experienceWrapper::before {
   position: absolute;
   content: "";
   top: 0;
   left: 50%;
-  margin-left: -0.0625rem;
-  width: 0.125rem;
+
+  background-color: grey;
+  margin-left: -0.8px;
+  width: 1.8px;
   height: 100%;
-  z-index: 1;
+  // z-index: 1;
 }
 
 .timeline-block {
@@ -285,9 +301,9 @@ nav ul li {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  border: 0.3123rem solid grey;
+  border: 6px solid grey;
   background-color: orange;
-  margin-top: 0.625rem;
+  margin-top: 10px;
   z-index: 3;
 }
 
@@ -306,10 +322,10 @@ nav ul li {
 
 // Media---------------
 @media (max-width: 768px) {
-  .experience__wrapper .container {
+  .experienceWrapper .container {
     padding-left: 0;
   }
-  .experience__wrapper::before {
+  .experienceWrapper::before {
     left: 0.5rem;
     margin-bottom: 1.875rem;
   }

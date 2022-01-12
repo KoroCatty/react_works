@@ -2,7 +2,7 @@ import React from 'react';
 import netflix from "../images/netflix.png";
 import cityGuide from "../images/city-guide-app.png";
 import portfolio from "../images/portfolio.png";
-import taskManager from "../images/task-manager.png";
+import taskManager from "../images/kojima.png";
 // FONT AWESOME
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearchPlus, } from '@fortawesome/free-solid-svg-icons';
@@ -166,7 +166,7 @@ export const Portfolio = () => {
 
 
 
-
+// ---------------------------------
   return (
     <div id="portfolio" className="portfolio__wrapper">
       <div className="container ">
@@ -174,7 +174,8 @@ export const Portfolio = () => {
 
         <div className="image-box-wrapper d-flex flex-wrap align-items-center justify-content-center">
 
-          {/* <div className="image-box-wrapper row justify-content-center"> This doesn't work*/}
+          {/* <div className="image-box-wrapper row justify-content-center"> This doesn't work(too old?)*/}
+
           {/* - */}
           <div className="portfolio-image-box" onClick={openPopupboxNetflix}>
             <img src={netflix} alt="netflix" className="portfolio-image" />

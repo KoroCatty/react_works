@@ -1,6 +1,7 @@
 import React from 'react';
-import logo from "../logo.png";
-import {Link} from "react-scroll";
+import k_logo from "../k_logo.png";
+// scroll Library
+import { Link } from "react-scroll";
 
 // REACT FONT AWESOME IMPORTS
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -9,15 +10,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
-      <div className="container">
+      <div className="container navbarContainer">
 
-        <a className="navbar-brand" href="#">
-          <img className="headerLogo" src={logo} alt="logo..." />
+        <a className="navbarBrand" href="#">
+          <img className="navbarBrand__logo" src={k_logo} alt="logo..." />
         </a>
 
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          {/* <span className="navbar-toggler-icon"></span> */}
-          <FontAwesomeIcon icon={faBars} style={{ color: "#fff"}} />
+
+          {/* Hamburger Icon */}
+          <FontAwesomeIcon icon={faBars} style={{ color: "#fff" }} />
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -44,12 +46,9 @@ const Navbar = () => {
               <Link smooth={true} to="portfolio" duration={600} offset={-110} className="nav-link" href="#">Portfolio</Link >
             </li>
             <li className="nav-item">
-              <Link smooth={true} to="contacts" duration={600} offset={-110} className="nav-link" href="#">Contacts</Link >
+              <Link smooth={true} to="contacts" duration={600} offset={-90} className="nav-link" href="#">Contacts</Link >
             </li>
-
-
           </ul>
-
         </div>
       </div>
       {/* .container */}

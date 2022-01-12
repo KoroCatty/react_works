@@ -1,27 +1,34 @@
 import React from "react";
-import Typed from "react-typed";// Library
-import { ParticleBg } from "./ParticleBg";
 
+// Library (typing effect)
+import Typed from "react-typed";
+
+import { ParticleBg } from "./ParticleBg";
+// scroll Library
+import { Link } from "react-scroll";
 
 export const Header = () => {
   return (
-      <div id="home" className="header-wrapper">
-        <ParticleBg />
-        <div className="main-info">
-          <h1 className="main-infoText">web development and websites promotions</h1>
+    <div id="home" className="headerWrapper">
+      <ParticleBg />
 
-      {/* Loop the texts */}
-       <Typed 
-       className="typed-text"
-       strings={["Web Design", "Web Development", "Facebook Ads SMM", "Google Ads"]}
-       typeSpeed={40}
-       backSpeed={60}
-       loop
-       />
+      <div className="headerInfo">
+        <h1 className="headerInfoText">web development and websites promotions</h1>
 
-       <a href="" className="btnMain__offer">Contact Me</a>
-        </div>
+        {/* Loop the texts */}
+        <Typed
+          className="typed-text"
+          strings={["Web Design", "Web Development", "Facebook Ads SMM", "Google Ads"]}
+          typeSpeed={40}
+          backSpeed={60}
+          loop
+        />
+
+        <Link smooth={true} to="contacts" duration={600} offset={-90} href="" className="headerBtn">
+          Contact Me
+        </Link>
       </div>
+    </div>
   )
 }
 
