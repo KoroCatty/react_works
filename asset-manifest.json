@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react_works/static/css/main.be005e92.css",
-    "main.js": "/react_works/static/js/main.90b238b2.js",
+    "main.css": "/react_works/static/css/main.6b6535b0.css",
+    "main.js": "/react_works/static/js/main.98c5209d.js",
     "static/js/787.12a8bc9c.chunk.js": "/react_works/static/js/787.12a8bc9c.chunk.js",
     "static/media/netflix.png": "/react_works/static/media/netflix.5a78c4b980990001021b.png",
     "static/media/city-guide-app.png": "/react_works/static/media/city-guide-app.e4843bd01dc4d1634538.png",
@@ -15,12 +15,12 @@
     "static/media/avatar-1.png": "/react_works/static/media/avatar-1.9277ecea7570a7cb523d.png",
     "static/media/avatar-2.png": "/react_works/static/media/avatar-2.75d8f23ea5e97b4d897d.png",
     "index.html": "/react_works/index.html",
-    "main.be005e92.css.map": "/react_works/static/css/main.be005e92.css.map",
-    "main.90b238b2.js.map": "/react_works/static/js/main.90b238b2.js.map",
+    "main.6b6535b0.css.map": "/react_works/static/css/main.6b6535b0.css.map",
+    "main.98c5209d.js.map": "/react_works/static/js/main.98c5209d.js.map",
     "787.12a8bc9c.chunk.js.map": "/react_works/static/js/787.12a8bc9c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.be005e92.css",
-    "static/js/main.90b238b2.js"
+    "static/css/main.6b6535b0.css",
+    "static/js/main.98c5209d.js"
   ]
 }
