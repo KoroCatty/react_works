@@ -9,7 +9,7 @@
   --primary-dark: rgba(255, 255, 255, 0);
   --primary-red: #ef4035;
   --primary-hover-red: #f33501;
-  --primary-transparent-black: rgba(0,0,0,0.7);
+  --primary-transparent-black: rgba(0, 0, 0, 0.7);
 }
 
 body {
@@ -55,7 +55,8 @@ nav ul li {
   }
 }
 // 押したボタンの上に表示させる
-.navbar-nav > li > a.active, .navbar-nav > li >a:focus {
+.navbar-nav > li > a.active,
+.navbar-nav > li > a:focus {
   border-top: 0.2rem solid var(--primary-orange);
 }
 
@@ -130,9 +131,9 @@ nav ul li {
 
 //Particle JS------------------------
 .particles__canvas {
-  position: absolute;
-  height: 100vh;
-  width: 95vw;
+  position: relative;
+  height: 100%;
+  width: 100%;
   z-index: 1;
 
   // overflow-y:hidden;
@@ -305,8 +306,8 @@ nav ul li {
 
 // Media---------------
 @media (max-width: 768px) {
-  .experience__wrapper .container{
-    padding-left:0;
+  .experience__wrapper .container {
+    padding-left: 0;
   }
   .experience__wrapper::before {
     left: 0.5rem;
@@ -314,52 +315,52 @@ nav ul li {
   }
   .timeline-block-right {
     float: none;
-    width:100%;
+    width: 100%;
   }
   .timeline-block-left {
     float: none;
-    direction:ltr;
-    width:100%;
+    direction: ltr;
+    width: 100%;
   }
 }
 // Portfolio--------------------------
 .portfolio__wrapper {
-  background-color:var(--primary-light-grey);
+  background-color: var(--primary-light-grey);
   padding: 3rem 0;
 }
 .portfolio__wrapper h1 {
   color: orange;
 }
 .portfolio-image-box {
-  position:relative;
-  margin:1rem;
+  position: relative;
+  margin: 1rem;
   // text-align: center;
- }
+}
 .portfolio-image {
-  width:15rem;
-  border:1px solid var(orange);
+  width: 15rem;
+  border: 1px solid var(orange);
   padding: 0 0.5rem;
 }
 
 // Overflow Box--------------
 .overflow {
   position: absolute;
-  top:0;
+  top: 0;
   border: 1px solid red;
   background-color: black;
-  opacity:0;
+  opacity: 0;
   width: 15rem;
-  height:  8rem;
+  height: 8rem;
   cursor: pointer;
 }
-.portfolio-image-box:hover .overflow{
+.portfolio-image-box:hover .overflow {
   opacity: 60%;
-  transition: all 0.3s ease-in-out ;
+  transition: all 0.3s ease-in-out;
 }
 
 .portfolilo-icon {
   position: absolute;
-  opacity:0;
+  opacity: 0;
   margin-left: -8rem;
   margin-top: 3.6rem;
   color: var(--primary-orange);
@@ -367,7 +368,7 @@ nav ul li {
 }
 .portfolio-image-box:hover .portfolilo-icon {
   opacity: 0.9;
-  transition: all 0.3s ease-in-out ;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 // Pop up box ---------------
@@ -377,55 +378,55 @@ nav ul li {
   height: 65vh;
 }
 .portfolio-image-popupbox {
-width: 25rem;
-padding: 0 0.5rem;
-height:30vh;
-// background-color: red;
+  width: 25rem;
+  padding: 0 0.5rem;
+  height: 30vh;
+  // background-color: red;
 }
 .hyper-link {
   cursor: pointer;
-  color:orange;
+  color: orange;
 }
 .hyper-link:hover {
-  color:var(--primary-red);
+  color: var(--primary-red);
 }
 // Media-------------
 // Pop-up時のサイズ
-@media(max-width:768px) {
-  .portfolio-image-popupbox{
+@media (max-width: 768px) {
+  .portfolio-image-popupbox {
     width: 100%;
   }
 }
 
-@media(max-height:570px) {
-  .portfolio-image-popupbox{
+@media (max-height: 570px) {
+  .portfolio-image-popupbox {
     width: 80%;
   }
-  .portfolio-image-popupbox{
+  .portfolio-image-popupbox {
     width: 50%;
   }
 }
 
-@media(max-height:280px) {
-  .portfolio-image-popupbox{
-    height:  90%;
+@media (max-height: 280px) {
+  .portfolio-image-popupbox {
+    height: 90%;
   }
-  .portfolio-image-popupbox{
+  .portfolio-image-popupbox {
     width: 30%;
   }
 }
 // TestimonialsCarousel --------------
 .testimonials {
   background-image: url("../src/testimonials-bg.jpg");
-  background-size:cover ;
+  background-size: cover;
   // background-color:black;
   text-align: center;
   padding-bottom: 4rem;
   margin-bottom: 0;
-  width:100%;
+  width: 100%;
 }
 .testimonials h1 {
-  color:orange;
+  color: orange;
   padding: 3rem 0;
   text-transform: uppercase;
 }
@@ -433,12 +434,12 @@ height:30vh;
   text-align: center;
   max-width: 53.125rem;
   margin: 0 auto 2rem auto;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .myCarousel {
-  color:white;
-  background:transparent;
-  margin-top:-6%;
+  color: white;
+  background: transparent;
+  margin-top: -6%;
   width: 54%;
   margin-left: auto;
   margin-right: auto;
@@ -459,7 +460,7 @@ height:30vh;
 
 .carousel .slide img {
   width: 10rem !important;
-  border-radius: 50%;;
+  border-radius: 50%;
 }
 .carousel .slide {
   // background: transparent !important;
@@ -474,7 +475,7 @@ height:30vh;
 
 // Contacts --------------------
 .contacts {
-  background:black;
+  background: black;
   padding: 3rem 0;
 }
 
@@ -484,32 +485,34 @@ height:30vh;
   text-transform: uppercase;
 }
 .contacts p {
-  color:grey;
-  font-size:1.2rem;
+  color: grey;
+  font-size: 1.2rem;
   margin-bottom: 4vw;
 }
 
 // INPUTS -------------------------
-form{
-  margin-top:3vw !important;
+form {
+  margin-top: 3vw !important;
 }
-.contacts input, .contacts textarea {
+.contacts input,
+.contacts textarea {
   width: 100%;
   box-sizing: border-box;
   background: none;
-  resize: none;//resize は CSS のプロパティで、要素の寸法を変更できるかどうか、もしそうなら、どの方向に変更できるかを設定します
+  resize: none; //resize は CSS のプロパティで、要素の寸法を変更できるかどうか、もしそうなら、どの方向に変更できるかを設定します
   border: 0;
   border-bottom: 0.124rem solid darkgrey;
   border-radius: 0;
   color: var(grey);
-  outline: 0 !important;//borderでは表現できないこともoutlineなら表現できます。outlineは要素の輪郭線の太さ・色・スタイルを指定できるプロパティです。borderとほとんど一緒です
-  box-shadow:none;
-  top:0;
+  outline: 0 !important; //borderでは表現できないこともoutlineなら表現できます。outlineは要素の輪郭線の太さ・色・スタイルを指定できるプロパティです。borderとほとんど一緒です
+  box-shadow: none;
+  top: 0;
   margin-bottom: 1rem;
   padding-left: 0;
 }
 
-.contacts input:focus, .contacts textarea:focus {
+.contacts input:focus,
+.contacts textarea:focus {
   background: transparent;
   color: orange;
   border-bottom: 0.124rem solid darkgrey;
@@ -520,10 +523,10 @@ form{
 }
 .contact-btn {
   margin: 1rem 0 0 0;
-  padding:1vw 0;
+  padding: 1vw 0;
   width: 100%;
   background: none;
-  color:white;
+  color: white;
 }
 .contact-btn:hover {
   background-color: orange;
@@ -531,7 +534,7 @@ form{
 }
 .line {
   position: relative;
-  top:-2rem;
+  top: -2rem;
   width: 0;
   height: 0.125rem;
   background: orange;
@@ -540,7 +543,8 @@ form{
 
 //隣接兄弟セレクター。内側ではない最初のpを指定
 // inputにfocusしたら表示される
-input:focus+.line, textarea:focus+.line {
+input:focus + .line,
+textarea:focus + .line {
   width: 100%;
   transition: width 0.5s ease-in-out;
 }
@@ -550,23 +554,23 @@ input:focus+.line, textarea:focus+.line {
 }
 
 .success-message {
-  color:orange;
+  color: orange;
   font-size: 3vw;
   line-height: 6vw;
 }
 
 // Media ---------------------------
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .contacts {
-    overflow-x:hidden;//Remove a horizontal scroll bar
+    overflow-x: hidden; //Remove a horizontal scroll bar
   }
 }
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .contacts .container {
     padding: 0 1rem;
   }
 }
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .contacts p {
     padding: 0 0.4rem;
   }
@@ -574,21 +578,20 @@ input:focus+.line, textarea:focus+.line {
 
 // Footer ----------------------
 .footer {
-  background:lightgreen;
-  color:black;
+  background: lightgreen;
+  color: black;
   padding: 3rem;
 }
 .footer a {
   text-decoration: none;
-  color:grey;
+  color: grey;
 }
 .footer a:hover {
   text-decoration: none;
-  color:orange;
+  color: orange;
   cursor: pointer;
 }
 
 .footer p {
   margin-bottom: 0;
 }
-

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Particles from "react-tsparticles";
 
 export const ParticleBg = () => {
@@ -106,6 +106,9 @@ export const ParticleBg = () => {
             },
           },
           detectRetina: true,
+          backgroundMode: {
+            enable: false
+          }
         }}
       />
   )
