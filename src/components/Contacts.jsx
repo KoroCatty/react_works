@@ -7,7 +7,6 @@ export const Contacts = () => {
   const [successMessage, setSuccessMessage] = useState("");
 
   // const[inputContnet], [setInputContnet] = useState("");
-  // Form Validation
   const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = (data, r) => {
@@ -37,8 +36,7 @@ export const Contacts = () => {
     // const sendEmail = (serviceID, templateID, form.current, user_wA38mxRtUjkOAGwKXSbbn) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
+    emailjs.sendForm(
         "serviceID",
         "templateID",
         form.current,
@@ -68,8 +66,8 @@ export const Contacts = () => {
   return (
     <div id="contacts" className="contacts">
       <div className="text-center">
-        <h1>contact me</h1>
-        <p>
+        <h1 className="contactsTitle">contact me</h1>
+        <p className="contactsText">
           Please fill out the form and describe your project needs and I'll
           contact you as soon as possible.
         </p>
@@ -83,10 +81,11 @@ export const Contacts = () => {
             {/* <form ref={form} onSubmit={handleSubmit(onSubmit)}> */}
             <div className="row">
               <div className="col-md-6 col-xs-12">
+                
                 {/* NAME INPUT */}
+                 {/* これによりinputにhover時真ん中から黄色の線が流れるようになる */}
                 <div className="text-center">
                   {" "}
-                  {/* これによりinputにhover時真ん中から黄色の線が流れるようになる */}
                   <input
                     type="text"
                     className="form-control"
@@ -94,19 +93,6 @@ export const Contacts = () => {
                     name="name"
                     register={register}
                     required
-                    // 送信時に空にするためvalueを入れる
-                    // value={successMessage}
-                    // onChange={e => setValue(e.target.value)}
-
-                    // ref={
-                    //   register({
-                    //     required: "Please enter your name",
-                    //     maxLength: {
-                    //       value: 20,
-                    //       message: "Please enter a name with fewer than 20 characters"
-                    //     }
-                    //   })
-                    // }
                   />
                   <div className="line"></div>
                 </div>
@@ -154,17 +140,15 @@ export const Contacts = () => {
                     // id="description"
                     type="text"
                     className="form-control"
-                    placeholder="Please tell me your thought"
+                    placeholder="Please tell me your thoughts"
                     name="description"
+                    required
                   ></textarea>
                   <div className="line"></div>
                 </div>
                 <button
                   className="btn-main-offer contact-btn"
                   type="submit"
-                  // ボタンが押されたらinput内を空にする
-                  // onClick={value}
-                  // onClick={() => setValue('')}
                 >
                   contact me
                 </button>

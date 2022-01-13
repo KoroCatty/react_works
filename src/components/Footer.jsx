@@ -15,11 +15,12 @@ export const Footer = () => {
     <div className="footer">
 
 
-      <div className="container">
+      <div className="container footerContainer">
         <div className="row">
-          <div className="col-lg-4 col-md-6 col-sm-6">
+
+          <div className="col-lg-4 col-md-4 col-sm-6 mt-3">
             <div className="d-flex">
-              <p>city Melborne Main st 2022 office #223</p>
+              <p>City Melborne Main st 2022 office #2022</p>
             </div>
 
             <div className="d-flex">
@@ -27,12 +28,12 @@ export const Footer = () => {
             </div>
 
             <div className="d-flex">
-              <p>kojimacoding@gmail.com</p>
+              <p>kojima1847@gmail.com</p>
             </div>
           </div>
 
-          <div className="col-lg-3 col-md-2 col-sm-6">
-            <div className="row">
+          <div className="col-lg-3 col-md-3 col-sm-4">
+            <div className="row mt-3">
               <div className="col">
                 <a href="" className="footer-nav">Home</a>
                 <br />
@@ -53,7 +54,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="col-lg-5 col-md-5 col-sm-6 align-items-center">
+          <div className="social__icons col-lg-5 col-md-5 col-sm-6 mt-3 align-items-center">
             <div className="d-flex justify-content-center">
               <FacebookShareButton
                 url={"https://www.youtube.com/kaydrum"}
@@ -99,6 +100,7 @@ export const Footer = () => {
           </div>
 
         </div>
+        {/* .row */}
       </div>
     </div>
   )

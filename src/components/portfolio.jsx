@@ -2,7 +2,7 @@ import React from 'react';
 import netflix from "../images/netflix.png";
 import cityGuide from "../images/city-guide-app.png";
 import portfolio from "../images/portfolio.png";
-import taskManager from "../images/kojima.png";
+import kojima from "../images/kojima.png";
 // FONT AWESOME
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearchPlus, } from '@fortawesome/free-solid-svg-icons';
@@ -21,11 +21,11 @@ export const Portfolio = () => {
   const openPopupboxNetflix = () => {
     const content = (
       <>
-        <img className='portfolio-image-popupbox' src={netflix} alt="netflix" />    {/* Open the image */}
-        <p>
+        <img className='portfolioImage' src={netflix} alt="netflix" />    {/* Open the image */}
+        <p className='portfolioText'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae saepe fuga ipsum alias tenetur praesentium, quos eum blanditiis officia, tempora, consequatur cum? Nesciunt necessitatibus, quo at hic vitae fugiat itaque.
         </p>
-        <b>Git Hub</b> <a href="" className="hyper-link" onClick={() => window.open("https://google.com","_black")}>https://google.com</a>
+        <b className='portfolioTitle'>Git Hub</b> <a href="" className="hyper-link" onClick={() => window.open("https://google.com","_black")}>https://google.com</a>
       </>
     )
   //   PopupboxManager.open({ content })
@@ -57,13 +57,13 @@ export const Portfolio = () => {
   const openPopupboxCityGuide = () => {
     const content = (
       <>
-        <img className='portfolio-image-popupbox' src={cityGuide} alt="City Guide App" />    {/* Open the image */}
-        <p>
+        <img className='portfolioImage' src={cityGuide} alt="City Guide App" />    {/* Open the image */}
+        <p className='portfolioText'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae saepe fuga ipsum alias tenetur praesentium, quos eum blanditiis officia, tempora, consequatur cum? Nesciunt necessitatibus, quo at hic vitae fugiat itaque.
         </p>
-        <b>Demo:</b> <a href="" className="hyper-link" onClick={() => window.open("https://google.com", "_black","_black")}>https://google.com</a>
+        <b className='portfolioTitle'>Demo:</b> <a href="" className="hyper-link" onClick={() => window.open("https://google.com", "_black","_black")}>https://google.com</a>
         <br />
-        <b>Git Hub</b> <a href="" className="hyper-link" onClick={() => window.open("https://google.com","_black")}>https://google.com</a>
+        <b className='portfolioTitle'>Git Hub</b> <a href="" className="hyper-link" onClick={() => window.open("https://google.com","_black")}>https://google.com</a>
       </>
     )
     // PopupboxManager.open({ content })
@@ -93,13 +93,13 @@ export const Portfolio = () => {
   const openPopupboxPortfolio = () => {
     const content = (
       <>
-        <img className='portfolio-image-popupbox' src={portfolio} alt="Portfolio Project" />    {/* Open the image */}
-        <p>
+        <img className='portfolioImage' src={portfolio} alt="Portfolio Project" />    {/* Open the image */}
+        <p className='portfolioText'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae saepe fuga ipsum alias tenetur praesentium, quos eum blanditiis officia, tempora, consequatur cum? Nesciunt necessitatibus, quo at hic vitae fugiat itaque.
         </p>
-        <b>Demo:</b> <a href="" className="hyper-link" onClick={() => window.open("https://google.com", "_black")}>https://google.com</a>
+        <b className='portfolioTitle'>Demo:</b> <a href="" className="hyper-link" onClick={() => window.open("https://google.com", "_black")}>https://google.com</a>
         <br />
-        <b>Git Hub</b> <a href="" className="hyper-link" onClick={() => window.open("https://google.com","_black")}>https://google.com</a>
+        <b className='portfolioTitle'>Git Hub</b> <a href="" className="hyper-link" onClick={() => window.open("https://google.com","_black")}>https://google.com</a>
       </>
     )
   //   PopupboxManager.open({ content })
@@ -128,17 +128,17 @@ export const Portfolio = () => {
   }
 
 
-  // ---------------TaskManager Project-------------
-  const openPopupboxTaskManager = () => {
+  // ---------------kojima Project-------------
+  const openPopupboxKojima = () => {
     const content = (
       <>
-        <img className='portfolio-image-popupbox' src={taskManager} alt="Portfolio Project" />    {/* Open the image */}
-        <p>
+        <img className='portfolioImage' src={kojima} alt="Portfolio Project" />    {/* Open the image */}
+        <p className='portfolioText'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae saepe fuga ipsum alias tenetur praesentium, quos eum blanditiis officia, tempora, consequatur cum? Nesciunt necessitatibus, quo at hic vitae fugiat itaque.
         </p>
-        <b>Demo:</b> <a href="" className="hyper-link" onClick={() => window.open("https://google.com", "_black")}>https://google.com</a>
+        <b className='portfolioTitle'>Demo:</b> <a href="" className="hyper-link" onClick={() => window.open("https://korocatty.github.io/works/", "_black")}>https://korocatty.github.io/works</a>
         <br />
-        <b>Git Hub</b> <a href="" className="hyper-link" onClick={() => window.open("https://google.com","_black")}>https://google.com</a>
+        <b className='portfolioTitle'>Git Hub</b> <a href="" className="hyper-link" onClick={() => window.open("https://github.com/KoroCatty/works","_black")}>https://github.com/KoroCatty/works</a>
       </>
     )
   //   PopupboxManager.open({ content })
@@ -148,16 +148,16 @@ export const Portfolio = () => {
     content,
     config: {
       titleBar: {
-        text: "yes",
+        text: "Kojima JavaScript Project",
       },
     },
   });
 }
   // pop-up box 内のeffectなどを追加
-  const popupboxConfigTaskManager = {
+  const popupboxConfigKojima = {
     titleBar: {
       enable: true,
-      // text: "TaskManager Redux Project"
+      // text: "Kojima Redux Project"
       // fontSize:"2px",
     },
     fadeIn: true,
@@ -180,6 +180,8 @@ export const Portfolio = () => {
           <div className="portfolio-image-box" onClick={openPopupboxNetflix}>
             <img src={netflix} alt="netflix" className="portfolio-image" />
             <div className="overflow"></div>
+
+            {/* 虫メガネアイコン */}
             <FontAwesomeIcon className='portfolilo-icon' icon={faSearchPlus} />
 
           </div>
@@ -202,9 +204,10 @@ export const Portfolio = () => {
 
           {/* - */}
 
-          <div className="portfolio-image-box" onClick={openPopupboxTaskManager}>
-            <img src={taskManager} alt="taskManager" className="portfolio-image" />
+          <div className="portfolio-image-box" onClick={openPopupboxKojima}>
+            <img src={kojima} alt="Kojima" className="portfolio-image" />
             <div className="overflow"></div>
+            
             <FontAwesomeIcon className='portfolilo-icon' icon={faSearchPlus} />
 
           </div>
@@ -217,7 +220,7 @@ export const Portfolio = () => {
       <PopupboxContainer {...popupboxConfigNetflix} />
       <PopupboxContainer {...popupboxConfigCityGuide} />
       <PopupboxContainer {...popupboxConfigPortfolio} />
-      <PopupboxContainer {...popupboxConfigTaskManager} />
+      <PopupboxContainer {...popupboxConfigKojima} />
     </div>
   )
 }
