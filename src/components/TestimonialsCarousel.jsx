@@ -22,7 +22,7 @@ export const TestimonialsCarousel = () => {
         <>
         <img src={avatar1} alt="" />
         <div className="myCarousel">
-          <h3>John Doe 1</h3>
+          <h3>Chris Blakeley </h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque illum voluptate, blanditiis vitae qui cum assumenda ullam distinctio quaerat autem facere! Itaque ipsa numquam quaerat quos unde aliquid, ea omnis!</p>
         </div>
       </>
@@ -30,7 +30,7 @@ export const TestimonialsCarousel = () => {
       <>
         <img src={avatar2} alt="" />
         <div className="myCarousel">
-          <h3>John Doe 2</h3>
+          <h3>Adelle Emmery</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque illum voluptate, blanditiis vitae qui cum assumenda ullam distinctio quaerat autem facere! Itaque ipsa numquam quaerat quos unde aliquid, ea omnis!</p>
         </div>
       </>
@@ -38,7 +38,7 @@ export const TestimonialsCarousel = () => {
       <>
         <img src={avatar3} alt="" />
         <div className="myCarousel">
-          <h3>John Doe 3</h3>
+          <h3>Krish Thhaker</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque illum voluptate, blanditiis vitae qui cum assumenda ullam distinctio quaerat autem facere! Itaque ipsa numquam quaerat quos unde aliquid, ea omnis!</p>
         </div>
       </>
@@ -46,7 +46,7 @@ export const TestimonialsCarousel = () => {
       <>
         <img src={avatar4} alt="" />
         <div className="myCarousel">
-          <h3>John Doe 4</h3>
+          <h3>Hidenobu Kasamatsu</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque illum voluptate, blanditiis vitae qui cum assumenda ullam distinctio quaerat autem facere! Itaque ipsa numquam quaerat quos unde aliquid, ea omnis!</p>
         </div>
       </>

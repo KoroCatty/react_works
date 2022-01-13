@@ -20,7 +20,7 @@ export const AboutMe = () => {
 
             I create responsive websites that are displayed on all devices desktops and smartphones.
 
-            Of course, before I begin developing any webapp, Landing Page, Business Website or E-commerce, I need to have a ready-made project layout (sketch).
+            Of course, before I begin developing any webapp, Landing Page, Business Website or E-commerce, I need to have a ready-made project layout (Figma or Adobe software).
 
             And I’m ready to do this for you, before we start developing your website, we will discuss all the  details of your niche with you, I will conduct a survey of your competitors and make a list of their advantages and weaknesses.
 
