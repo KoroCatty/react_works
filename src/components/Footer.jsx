@@ -1,4 +1,8 @@
 import React from 'react';
+// scroll Library
+import { Link } from "react-scroll";
+
+// Social Icons Library
 import {
   FacebookShareButton,
   FacebookIcon,
@@ -35,18 +39,18 @@ export const Footer = () => {
           <div className="col-lg-3 col-md-3 col-sm-4">
             <div className="row mt-3">
               <div className="col">
-                <a href="" className="footer-nav">Home</a>
+                <Link smooth={true} to="home" duration={600} offset={-110} href="" className="footer-nav">Home</Link>
                 <br />
-                <a href="" className="footer-nav">About Me</a>
+                <Link smooth={true} to="about" duration={600} offset={-110} href="" className="footer-nav">About Me</Link>
                 <br />
-                <a href="" className="footer-nav">Services</a>
+                <Link smooth={true} to="services" duration={600} offset={-110} href="" className="footer-nav">Services</Link>
               </div>
               <div className="col">
-                <a href="" className="footer-nav">Experience</a>
+                <Link smooth={true} to="experience" duration={600} offset={-110} href="" className="footer-nav">Experience</Link>
                 <br />
-                <a href="" className="footer-nav">Portfolio</a>
+                <Link smooth={true} to="portfolio" duration={600} offset={-110} href="" className="footer-nav">Portfolio</Link>
                 <br />
-                <a href="" className="footer-nav">Contacts</a>
+                <Link smooth={true} to="contacts" duration={600} offset={-80}  href="" className="footer-nav">Contacts</Link>
               </div>
 
 
