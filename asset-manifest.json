@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react_works/static/css/main.88b73f1c.css",
-    "main.js": "/react_works/static/js/main.045b3e2a.js",
+    "main.js": "/react_works/static/js/main.a73977f4.js",
     "static/js/787.12a8bc9c.chunk.js": "/react_works/static/js/787.12a8bc9c.chunk.js",
     "static/media/netflix.png": "/react_works/static/media/netflix.5a78c4b980990001021b.png",
     "static/media/city-guide-app.png": "/react_works/static/media/city-guide-app.e4843bd01dc4d1634538.png",
@@ -17,11 +17,11 @@
     "static/media/avatar-2.png": "/react_works/static/media/avatar-2.75d8f23ea5e97b4d897d.png",
     "index.html": "/react_works/index.html",
     "main.88b73f1c.css.map": "/react_works/static/css/main.88b73f1c.css.map",
-    "main.045b3e2a.js.map": "/react_works/static/js/main.045b3e2a.js.map",
+    "main.a73977f4.js.map": "/react_works/static/js/main.a73977f4.js.map",
     "787.12a8bc9c.chunk.js.map": "/react_works/static/js/787.12a8bc9c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.88b73f1c.css",
-    "static/js/main.045b3e2a.js"
+    "static/js/main.a73977f4.js"
   ]
 }
