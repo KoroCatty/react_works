@@ -1102,6 +1102,7 @@ body {
     width: 100%;
     margin: auto;
     margin-top: 20px;
+    line-height: 6.5vw;
   }
 }
 @media screen and (min-width: 420px) and (max-width: 768px) {
