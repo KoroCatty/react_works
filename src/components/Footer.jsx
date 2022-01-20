@@ -34,7 +34,7 @@ export const Footer = () => {
             </div>
 
             <div className="d-flex">
-              <p>kojima1847@gmail.com</p>
+              <p>kojima.website@gmail.com</p>
             </div>
           </div>
 
