@@ -23,7 +23,7 @@ export const Portfolio = () => {
       <>
         <img className='portfolioImage' src={kojima} alt="Portfolio Project" />    {/* Open the image */}
         <p className='portfolioText'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae saepe fuga ipsum alias tenetur praesentium, quos eum blanditiis officia, tempora, consequatur cum? Nesciunt necessitatibus, quo at hic vitae fugiat itaque.
+        This is a collection of my works, websites and web applications. This includes a company LP page, car E-commerce website, and Todo application. As part of the building process,  I use a variety of languages and tools such as HTML, CSS(Sass), JavaScript, React, VUe, Webpack, Wordpress and PHP.
         </p>
         <b className='portfolioTitle'>Demo:</b> <a href="https://k-works.netlify.app/works" className="hyper-link" onClick={() => window.open("https://k-works.netlify.app/works", "_black")}>https://k-works.netlify.app/works</a>
         <br />
