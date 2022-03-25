@@ -18,7 +18,7 @@ export const Experience = () => {
             <p className='timelineContent__text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est non tempora quibusdam velit animi neque tenetur, repellendus nihil eaque impedit. Rem sint voluptatibus dignissimos vitae eaque harum aliquam quasi laboriosam?</p>
           </div>
         </div>
-        {/* 1 */}
+        {/* 2 */}
         <div className="timeline-block timeline-block-left">
           <div className="marker"></div>
           <div className="timelineContent">
@@ -26,7 +26,7 @@ export const Experience = () => {
             <p className='timelineContent__text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est non tempora quibusdam velit animi neque tenetur, repellendus nihil eaque impedit. Rem sint voluptatibus dignissimos vitae eaque harum aliquam quasi laboriosam?</p>
           </div>
         </div>
-        {/* 1 */}
+        {/* 3 */}
         <div className="timeline-block timeline-block-right">
           <div className="marker"></div>
           <div className="timelineContent">
@@ -34,7 +34,7 @@ export const Experience = () => {
             <p className='timelineContent__text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est non tempora quibusdam velit animi neque tenetur, repellendus nihil eaque impedit. Rem sint voluptatibus dignissimos vitae eaque harum aliquam quasi laboriosam?</p>
           </div>
         </div>
-        {/* 1 */}
+        {/* 4 */}
         <div className="timeline-block timeline-block-left">
           <div className="marker"></div>
           <div className="timelineContent">
@@ -42,7 +42,7 @@ export const Experience = () => {
             <p className='timelineContent__text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est non tempora quibusdam velit animi neque tenetur, repellendus nihil eaque impedit. Rem sint voluptatibus dignissimos vitae eaque harum aliquam quasi laboriosam?</p>
           </div>
         </div>
-        {/* 1 */}
+        {/* 5 */}
         <div className="timeline-block timeline-block-right">
           <div className="marker"></div>
           <div className="timelineContent">
@@ -50,7 +50,7 @@ export const Experience = () => {
             <p className='timelineContent__text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est non tempora quibusdam velit animi neque tenetur, repellendus nihil eaque impedit. Rem sint voluptatibus dignissimos vitae eaque harum aliquam quasi laboriosam?</p>
           </div>
         </div>
-        {/* 1 */}
+        {/* 6 */}
         <div className="timeline-block timeline-block-left">
           <div className="marker"></div>
           <div className="timelineContent">

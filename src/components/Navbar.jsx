@@ -1,5 +1,5 @@
 import React from 'react';
-import k_logo from "../k_logo.png";
+import k_logo from "../images/k_logo.png";
 // scroll Library
 import { Link } from "react-scroll";
 

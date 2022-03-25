@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
 
+
 :root {
   --primary-white: #fff;
   --primary-light-grey: #f4f4f4;
@@ -37,7 +38,7 @@ nav ul li {
   text-transform: uppercase;
 }
 
-// 定義したものを呼び出し、bootstrapのルールを上書きするための !important
+// bootstrapのルールを上書きする !important
 .navbar-nav > li > a {
   color: var(--primary-white) !important ;
   margin-right: 0.75rem;
@@ -74,7 +75,7 @@ nav ul li {
 // HEADER----------------------------------
 .headerWrapper {
   position: relative;
-  background: url("../src/wall-and-laptop-background.jpg") no-repeat;
+  background: url("../src/images/wall-and-laptop-background.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -126,7 +127,6 @@ nav ul li {
   text-transform: uppercase;
   border-radius: 0;
   padding: 8px 12px;
-  // padding: 0.625rem 0.75rem 0.75rem 0.75rem;
   color: white;
   margin-top: 2rem;
 }
@@ -142,15 +142,8 @@ nav ul li {
   height: 100%;
   width: 100%;
   z-index: 1;
-
-  // overflow-y:hidden;
 }
-// .tsparticles-canvas-el {
-//   position:absolute;
-//   height:100vh;
-//   width: 95vw;
-//   z-index:1;
-// }
+
 
 @media (max-width: 768px) {
   .particles__canvas {
@@ -184,9 +177,6 @@ nav ul li {
 .aboutHeading {
   color: var(--primary-orange);
   text-transform: uppercase;
-  // &__text {
-
-  // }
 }
 
 // Services -------------------------
@@ -280,18 +270,17 @@ nav ul li {
   margin-left: -0.8px;
   width: 1.8px;
   height: 100%;
-  // z-index: 1;
 }
 
 .timeline-block {
   width: calc(50% + 0.5rem);
   display: flex;
   justify-content: space-between;
-  clear: both; //clearプロパティは、floatの回り込みを解除するプロパティです。 clearプロパティは、float指定した要素の次の要素に指定します。 float要素が連続している場合、一番最後のfloat要素の次の要素に指定します。
+  //clearプロパティfloatの回り込みを解除
+  clear: both; 
 }
 .timeline-block-right {
   float: right;
-  // transform: translateX(-2.5%);
 }
 .timeline-block-left {
   float: left;
@@ -315,9 +304,6 @@ nav ul li {
   &__heading {
     color: red;
   }
-  // &__text {
-  //   direction:ltr;
-  // }
 }
 
 // Media---------------
@@ -353,7 +339,8 @@ nav ul li {
   // text-align: center;
 }
 .portfolio-image {
-  width: 15rem;
+  max-width: 600px;
+  width:100%;
   border: 1px solid var(orange);
   padding: 0 0.5rem;
 }
@@ -365,8 +352,9 @@ nav ul li {
   border: 2px solid red;
   background-color: black;
   opacity: 0; //非表示に設定
-  width: 15rem;
-  height: 8rem;
+  max-width: 600px;
+  width:100%;
+  height: 100%;
   cursor: pointer;
 }
 .portfolio-image-box:hover .overflow {
@@ -377,10 +365,11 @@ nav ul li {
 .portfolilo-icon {
   position: absolute;
   opacity: 0; //非表示に設定
-  margin-left: -8rem;
-  margin-top: 3.6rem;
+  margin-left: -50%;
+  margin-top: 30%;
+  transform: translate(-30%, 0%);
   color: var(--primary-orange);
-  font-size: 1.5rem;
+  font-size: 32px;
 }
 .portfolio-image-box:hover .portfolilo-icon {
   opacity: 0.9;
@@ -476,7 +465,7 @@ nav ul li {
 
 // TestimonialsCarousel --------------
 .testimonials {
-  background-image: url("../src/testimonials-bg.jpg");
+  background-image: url("../src/images/testimonials-bg.jpg");
   background-size: cover;
   // background-color:black;
   text-align: center;
@@ -522,7 +511,6 @@ nav ul li {
   border-radius: 50%;
 }
 .carousel .slide {
-  // background: transparent !important;
   height: 100% !important;
   padding-top: 2rem;
 }
@@ -559,12 +547,15 @@ form {
   width: 100%;
   box-sizing: border-box;
   background: none;
-  resize: none; //resize は CSS のプロパティで、要素の寸法を変更できるかどうか、もしそうなら、どの方向に変更できるかを設定します
+
+  //要素の寸法を変更できるかどうか、もしそうなら、どの方向に変更できるかを設定
+  resize: none; 
   border: 0;
   border-bottom: 2px solid darkgrey;
   color: orange;
   border-radius: 0;
-  outline: 0 !important; //borderでは表現できないこともoutlineなら表現できます。outlineは要素の輪郭線の太さ・色・スタイルを指定できるプロパティです。borderとほとんど一緒です
+  //outlineは要素の輪郭線の太さ・色・スタイルを指定
+  outline: 0 !important; 
   box-shadow: none;
   top: 0;
   margin-bottom: 16px;
@@ -620,7 +611,6 @@ textarea:focus + .line {
 }
 
 // Media ---------------------------
-
 @media (max-width: 768px) {
   .contacts .container {
     padding: 0 16px;
@@ -663,22 +653,15 @@ textarea:focus + .line {
 }
 
 .social__icons {
-  // @media (max-width: 994px) {
-  //   margin-top:40px;
-  //   margin-left:-20px;
-  //   }
   @media (max-width: 460px) {
-    // margin-top:0px;
     margin-left:-24px;
     }
   @media (max-width: 280px) {
-    // margin-top:0px;
     margin-left:0px;
     }
 }
-.social__iconsRow {
-  // width:160px !important;
-}
+// .social__iconsRow {
+// }
 
 .youtube {
   width:50px;

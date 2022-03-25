@@ -18,7 +18,7 @@ export const Header = () => {
         {/* Loop the texts */}
         <Typed
           className="typed-text"
-          strings={["Web Design", "Web Development", "Facebook Ads SMM", "Google Ads"]}
+          strings={["Web Design", "Web Development", "Brand Design", "Google Ads"]}
           typeSpeed={40}
           backSpeed={60}
           loop

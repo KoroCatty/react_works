@@ -60,7 +60,7 @@ export const Contacts = () => {
       .catch((err) => console.error(`Something went wrong ${err}`));
   };
 
-  //button内と連動。ここで定義しておく。
+  //button内と連動。ここで定義しておく
   const [value, setValue] = useState("");
 
   return (
@@ -68,8 +68,7 @@ export const Contacts = () => {
       <div className="text-center">
         <h1 className="contactsTitle">contact me</h1>
         <p className="contactsText">
-          Please fill out the form and describe your project needs and I'll
-          contact you as soon as possible.
+          Please fill out the form and describe your project needs and I'll contact you as soon as possible.
         </p>
         {/* To show the successful message */}
         <span className="success-message">{successMessage}</span>
@@ -83,7 +82,7 @@ export const Contacts = () => {
               <div className="col-md-6 col-xs-12">
                 
                 {/* NAME INPUT */}
-                 {/* これによりinputにhover時真ん中から黄色の線が流れるようになる */}
+                 {/* inputにhover時真ん中から黄色の線が流れるようになる */}
                 <div className="text-center">
                   {" "}
                   <input

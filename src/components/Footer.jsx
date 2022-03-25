@@ -2,7 +2,7 @@ import React from 'react';
 // scroll Library
 import { Link } from "react-scroll";
 
-import youtube from "../youtube.png";
+import youtube from "../images/youtube.png";
 
 // Social Icons Library
 import {
@@ -19,7 +19,6 @@ import {
 export const Footer = () => {
   return (
     <div className="footer">
-
 
       <div className="container footerContainer">
         <div className="row">
@@ -80,14 +79,6 @@ export const Footer = () => {
                 </TwitterIcon>
               </TwitterShareButton>
 
-              {/* <RedditShareButton
-                url={"https://www.youtube.com/kaydrum"}
-                quote={"Drumming channel"}
-                hashtag="#kaydrum"
-              >
-                <RedditIcon className="mx-3" size={36}>
-                </RedditIcon>
-              </RedditShareButton> */}
 
               <LinkedinShareButton
                 url={"https://www.youtube.com/kaydrum"}

@@ -48,12 +48,12 @@ export const Services = () => {
               <div className="servicesContainer__rowBox">
 
               <div className="circleIconBg">
-                  <FontAwesomeIcon className="circleIcon" icon={faFacebookF} size="2x" />
+                  <FontAwesomeIcon className="circleIcon" icon={faFileCode} size="2x" />
                 </div>
 
-                <h3 className="servicesContainer__rowBox--title">Facebook Ads SMM</h3>
+                <h3 className="servicesContainer__rowBox--title">Brand Design</h3>
                 <p className="servicesContainer__rowBox--text">
-                  Your potential clients well see your services or product on Facebook.
+               I strive to understand your business so that they can design the perfect logo and brand to reflect its values.
                 </p>
               </div>
             </div>
